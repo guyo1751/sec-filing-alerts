@@ -89,7 +89,9 @@ def save_tracker(tracker):
 
 def main():
     with open(COMPANIES_FILE) as f:
-        tickers = json.load(f)["tickers"]
+        raw = f.read()
+        print(f"companies.json contents: '{raw}'")
+        tickers = json.loads(raw)["tickers"]
 
     tracker = load_tracker()
 
