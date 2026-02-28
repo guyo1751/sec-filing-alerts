@@ -90,6 +90,13 @@ def save_tracker(tracker):
     with open(TRACKER_FILE, "w") as f:
         json.dump(tracker, f, indent=2)
 
+def save_summary_to_file(ticker, form_type, filing_date, summary):
+    summary_file = "summaries.md"
+    with open(summary_file, "a") as f:
+        f.write(f"\n---\n")
+        f.write(f"## {ticker} — {form_type} — {filing_date}\n\n")
+        f.write(f"{summary}\n")
+
 def main():
     with open(COMPANIES_FILE) as f:
         raw = f.read()
@@ -112,9 +119,10 @@ def main():
         for filing in new_filings[:5]:  # Cap at 5 new filings per run
             print(f"  New filing: {filing['form']} on {filing['filingDate']}")
             text = get_filing_text(cik, filing["accessionNumber"], filing["primaryDocument"])
-            if text:
+        if text:
                 summary = summarize_filing(ticker, filing["form"], filing["filingDate"], text)
                 send_ntfy_alert(ticker, filing["form"], filing["filingDate"], summary, filing["accessionNumber"])
+                save_summary_to_file(ticker, filing["form"], filing["filingDate"], summary)
                 print(f"  Alert sent for {filing['form']}")
             seen.append(filing["accessionNumber"])
             time.sleep(1)  # Be polite to SEC servers
