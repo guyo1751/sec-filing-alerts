@@ -80,7 +80,10 @@ def send_ntfy_alert(ticker, form_type, filing_date, summary, accession_number):
 def load_tracker():
     if os.path.exists(TRACKER_FILE):
         with open(TRACKER_FILE) as f:
-            return json.load(f)
+            content = f.read().strip()
+            if not content:
+                return {}
+            return json.loads(content)
     return {}
 
 def save_tracker(tracker):
