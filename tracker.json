@@ -1,0 +1,9 @@
+json{}
+```
+
+---
+
+**FILE 3: `requirements.txt`**
+```
+anthropic
+requests
