@@ -116,18 +116,18 @@ def main():
         seen = tracker.get(ticker, [])
         new_filings = [f for f in filings if f["accessionNumber"] not in seen]
 
-        for filing in new_filings[:5]:  # Cap at 5 new filings per run
+        for filing in new_filings[:5]:
             print(f"  New filing: {filing['form']} on {filing['filingDate']}")
             text = get_filing_text(cik, filing["accessionNumber"], filing["primaryDocument"])
-        if text:
+            if text:
                 summary = summarize_filing(ticker, filing["form"], filing["filingDate"], text)
                 send_ntfy_alert(ticker, filing["form"], filing["filingDate"], summary, filing["accessionNumber"])
                 save_summary_to_file(ticker, filing["form"], filing["filingDate"], summary)
                 print(f"  Alert sent for {filing['form']}")
             seen.append(filing["accessionNumber"])
-            time.sleep(1)  # Be polite to SEC servers
+            time.sleep(1)
 
-        tracker[ticker] = seen[-100:]  # Keep last 100 to avoid file bloat
+        tracker[ticker] = seen[-100:]
         save_tracker(tracker)
         time.sleep(2)
 
