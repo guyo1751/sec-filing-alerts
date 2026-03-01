@@ -1542,3 +1542,258 @@ No specific production volumes, operational metrics, or capital expenditure figu
 - **Rule 425 Box Checked:** The filing constitutes a written communication under Rule 425, confirming active solicitation of shareholders ahead of the proxy vote — indicating the deal is advancing toward a shareholder vote.
 - **Registration Statement Pending:** The S-4/joint proxy has not yet been filed or declared effective, suggesting the deal is still several months from closing.
 - **No Financial Surprises:** The filing contains no earnings data or revised guidance, so there are no beats/misses to assess. The market-moving element is purely strategic (merger progression and additional deal details).
+
+---
+## PR — 10-Q — 2025-11-06
+
+# Permian Resources (PR) — 10-Q Filing Analysis
+## Quarter Ended September 30, 2025 (Filed November 6, 2025)
+
+---
+
+**Overview**
+This is a quarterly 10-Q filing from Permian Resources Corporation (ticker: PR) for the third quarter ended September 30, 2025 (fiscal year ending December 31, 2025), reporting on the company's Permian Basin-focused oil and gas exploration and production operations.
+
+---
+
+**Key Financials**
+The filing text provided consists primarily of XBRL taxonomy tags and entity/period identifiers rather than the full narrative and financial statement figures. Based on the structural data available:
+
+- **Revenue, Net Income, EPS, EBITDA, Free Cash Flow:** Specific dollar amounts are not extractable from the XBRL instance tags provided. The filing covers both Q3 2025 (July 1–September 30, 2025) and the nine-month YTD period (January 1–September 30, 2025), with comparative periods for Q3 2024 and YTD 2024.
+- **Capital Structure:** The company maintains a dual-class share structure (Class A and Class C common stock), with noncontrolling interest — consistent with an Up-C corporate structure.
+- **Debt Stack (as of 9/30/2025):**
+  - Revolving credit facility
+  - Senior Notes due 2026 (partially redeemed — see below)
+  - 8.00% Senior Notes due 2027
+  - Convertible Senior Notes due 2028 (converted/settled in Q3 — see below)
+  - 5.875% Senior Notes due 2029
+  - Senior Notes due 2031 (newly issued January 2025)
+  - 7.00% Senior Notes due 2032
+  - Senior Notes due 2033
+
+---
+
+**Production & Operations**
+- **Acquisitions:**
+  - **June 16, 2025 Bolt-On Acquisition:** Acquired leasehold acres with allocation to both proved and unproved properties, continuing the company's Permian Basin consolidation strategy.
+  - **Additional 2025 acquisitions** are referenced for the nine-month period.
+  - **September 17, 2024 Bolt-On Acquisition (prior year):** Included both leasehold and royalty acres.
+- **Drilling Commitments:** The company has outstanding drilling agreements as of September 30, 2025.
+- **CapEx:** Not extractable from XBRL tags alone, but the active drilling program and acquisitions suggest continued significant capital deployment.
+
+---
+
+**Guidance & Outlook**
+No specific forward guidance language is extractable from the XBRL data provided. Management commentary would be in the MD&A section of the full filing.
+
+---
+
+**Risks & Concerns**
+- **Leverage / Complex Debt Stack:** Seven tranches of debt outstanding, including convertible notes and a revolver, create refinancing risk. The revolver has variable-rate exposure tied to SOFR.
+- **Commodity Price Hedging:** The company has crude oil swap positions across multiple periods (NYMEX WTI, non-designated hedges), which cap upside participation in rising oil prices.
+- **Convertible Notes Settlement (September 12, 2025):** The 2028 Convertible Notes were settled/converted, with Class A shares issued — dilutive to existing shareholders.
+- **2026 Senior Notes:** Partial redemptions occurred in June and September 2025, indicating near-term maturity management but also cash outflow.
+- **Noncontrolling Interest:** The Up-C structure adds complexity to earnings attribution and potential future unit conversions (dilution).
+
+---
+
+**Market Moving Items**
+1. **Convertible Note Conversion (Sept 12, 2025):** The 2028 Convertible Senior Notes were converted into Class A shares during Q3 2025, eliminating this debt tranche but increasing share count — a notable capital structure event.
+2. **New Debt Issuance:** Senior Notes due 2031 were issued on January 24, 2025, indicating proactive liability management and terming out maturities.
+3. **2026 Notes Redemption:** Partial redemptions on June 12 and September 20, 2025, demonstrate active deleveraging of near-term maturities.
+4. **Continued
+
+---
+## FANG — 10-Q — 2025-08-06
+
+
+
+# FANG (Diamondback Energy) 10-Q Analysis — Q2 2025 (Filed 2025-08-06)
+
+## Overview
+This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter ended June 30, 2025, covering a period of significant M&A activity including the Double Eagle acquisition and Viper Energy's pending Sitio Royalties merger.
+
+---
+
+## Key Financials
+
+**Note:** The filing text provided is XBRL metadata/tagging rather than the full financial statements, so exact dollar figures are limited. However, key structural observations can be drawn:
+
+| Metric | Q2 2025 | Q2 2024 | H1 2025 | H1 2024 |
+|--------|---------|---------|---------|---------|
+| Revenue Streams | Oil, NatGas, NGL, Purchased Oil | Same | Same | Same |
+| Reporting Segments | Midland Basin, Delaware Basin, Other | Same | Same | Same |
+| Shares Outstanding (approx.) | ~285M+ (post-Double Eagle issuance) | Lower pre-merger count | — | — |
+
+**Revenue Composition:** Revenue is disaggregated across oil production, natural gas production, NGL production, and purchased oil — split by Midland Basin, Delaware Basin, and Other geographies.
+
+The filing includes a **Variable Interest Entity (VIE)** — Viper Energy — consolidated as a primary beneficiary, with noncontrolling interest reflected on the balance sheet.
+
+---
+
+## Production & Operations
+
+- **Basin Exposure:** Operations span the **Midland Basin** and **Delaware Basin** — the two premier sub-basins of the Permian.
+- **Double Eagle Acquisition (Closed April 1, 2025):** Diamondback acquired Double Eagle in an all-stock transaction, issuing FANG common shares. The acquisition added **Midland Basin** acreage with identified **horizontal locations in primary development targets**, significantly bolstering inventory depth.
+- **Endeavor Integration:** Filing references **Endeavor subsidiaries** with a disposition event on May 1, 2025, involving Viper Class B shares and Viper LLC units — likely a restructuring/clean-up of the September 2024 Endeavor mega-merger.
+- **TRP Energy Acquisition (December 20, 2024):** Added acreage in both the **Delaware Basin** and **Midland Basin**, with financial impacts flowing through Q1 and Q2 2025.
+- **Capital Expenditure:** Not explicitly quantified in the XBRL extract, but significant drilling and completion activity implied by multiple well references and ongoing development across both basins.
+
+---
+
+## Guidance & Outlook
+
+- No explicit forward guidance language is extractable from the XBRL metadata provided. However, the **sheer volume of acquisitions** (Double Eagle, TRP, Viper/Sitio) signals management is aggressively building long-duration Permian inventory.
+- **Viper Energy / Sitio Merger (Announced June 2, 2025):** Viper is acquiring Sitio Royalties in a transaction encompassing mineral/royalty interests across the **Permian Basin, Denver-Julesburg, Eagle Ford, and Williston Basins**. This deal, if closed, would make Viper one of the largest mineral-rights companies in the U.S.
+- The Sitio deal includes a **minimum and maximum consideration structure**, suggesting contingent pricing or a collar mechanism.
+
+---
+
+## Risks & Concerns
+
+1. **Integration Risk:** Three major acquisitions in rapid succession (Endeavor in 2024, Double Eagle and TRP in late 2024/early 2025) create meaningful execution and integration risk.
+2. **Leverage / Balance Sheet:** Significant acquisition activity likely increased debt levels; the filing references VIE assets/liabilities for Viper.
+3. **Litigation:** The XBRL includes a **lawsuit** data type tag, indicating pending litigation disclosed in the notes — specifics not available from metadata alone.
+4. **Commodity Price Exposure:** Oil-weighted Permian producer remains highly sensitive to WTI pricing; no hedging details extractable from provided data.
+5. **WTG Midstream Disposition:** Diamondback sold its interest in WTG Midstream to **Energy Transfer LP** (closed July 15, 2024), with ongoing
+
+---
+## CTRA — 8-K — 2026-01-21
+
+# CTRA (Coterra Energy Inc.) — 8-K Filing Analysis
+
+**Filed:** January 21, 2026
+
+---
+
+## Overview
+Coterra Energy filed an 8-K under Item 2.02 (Results of Operations) providing preliminary realized pricing and derivative settlement information for the fourth quarter ended December 31, 2025.
+
+---
+
+## Key Financials
+This filing is limited in scope — it does **not** include revenue, net income, EPS, EBITDA, or free cash flow. Only the following were disclosed:
+
+| Metric | Excluding Hedges | Including Hedges |
+|--------|----------------:|----------------:|
+| Oil ($/Bbl) | $58.16 | $60.34 |
+| Natural Gas ($/Mcf) | $2.37 | $2.44 |
+| NGL ($/Bbl) | $15.63 | $15.63 |
+
+- **Derivative settlements:** Anticipated **net cash received of $57 million** in Q4 2025, indicating hedges were in-the-money (i.e., hedged prices exceeded spot realizations).
+- The $2.18/Bbl positive hedge impact on oil and $0.07/Mcf on gas confirm that Coterra's hedge book provided meaningful downside protection in a weaker commodity price environment.
+
+---
+
+## Production & Operations
+- **No production volumes disclosed** in this filing. Volumetric data will be provided in the forthcoming Q4 2025 earnings release/10-K.
+- **No capital expenditure or operational updates** were included.
+
+---
+
+## Guidance & Outlook
+- **No forward guidance provided.** This filing is narrowly scoped to preliminary Q4 pricing and derivatives.
+- Full guidance updates are expected with the Q4/FY2025 earnings release.
+
+---
+
+## Risks & Concerns
+- **Weak commodity pricing environment:** Oil realizations of $58.16/Bbl (ex-hedges) are notably soft, suggesting WTI was trading in the upper-$50s during Q4 2025 — well below mid-cycle levels and pressuring cash flow generation and returns.
+- **Natural gas at $2.37/Mcf (ex-hedges)** remains subdued, though improved from the deeply depressed levels seen in 2024. This continues to weigh on Coterra's Marcellus segment economics.
+- **NGL pricing at $15.63/Bbl** is very weak, reflecting continued oversupply in NGL markets and limited export/petrochemical demand uplift.
+- The company noted all figures are **subject to final closing adjustments**, introducing some uncertainty around final reported numbers.
+- Standard forward-looking statement disclaimers reference risks detailed in the 10-K.
+
+---
+
+## Market Moving Items
+
+**Key Takeaways for Investors:**
+
+1. **Oil hedges provided meaningful uplift (+$2.18/Bbl):** The $57 million net hedge gain is a positive signal, but it also underscores that unhedged realizations were weak. As hedge books roll off, future quarters may not benefit from this tailwind.
+
+2. **Sub-$60 oil realizations are a concern:** At $58.16/Bbl unhedged, Coterra's oil margins are compressed. Depending on production volumes (not yet disclosed), this could result in a revenue and free cash flow miss relative to consensus if the Street was modeling higher realizations.
+
+3. **No surprises on gas/NGL:** Gas and NGL pricing is roughly in line with prevailing spot/strip during Q4 2025. No upside here.
+
+4. **Limited information filing:** This is a preliminary pricing-only 8-K ahead of the full earnings release. It signals management wanted to provide early transparency on a weaker-than-expected pricing quarter — which itself may be a soft negative signal.
+
+**Analyst View:** The filing paints a picture of a challenging commodity backdrop in Q4 2025. The hedge book provided a buffer, but the underlying unhedged realizations — particularly for oil — suggest downward pressure on earnings and cash returns. Investors should watch the full Q4 release closely for production volumes, capex, and 2026 guidance to assess whether CTRA can sustain its capital return framework in a lower-price environment.
+
+---
+## CTRA — 10-Q — 2025-11-04
+
+# CTRA (Coterra Energy) — Q3 2025 10-Q Filing Analysis
+
+---
+
+## **Overview**
+This is Coterra Energy's (CTRA) quarterly 10-Q filing for the third quarter ended September 30, 2025, filed with the SEC on November 4, 2025, covering the company's upstream oil and gas operations and recent acquisition activity.
+
+---
+
+## **Key Financials**
+
+Based on the XBRL tags and filing structure, the following can be extracted:
+
+| Metric | Q3 2025 | Q3 2024 | 9M 2025 | 9M 2024 |
+|--------|---------|---------|---------|---------|
+| **Oil & Condensate Revenue** | Reported | Reported | Reported | Reported |
+| **Natural Gas Revenue** | Reported | Reported | Reported | Reported |
+| **NGL Revenue** | Reported | Reported | Reported | Reported |
+| **Other Revenues** | Reported | Reported | Reported | Reported |
+| **Total Revenues** | Reported (aggregate of above) | Reported | Reported | Reported |
+| **Net Income** | Per retained earnings changes | Per retained earnings changes | Per retained earnings changes | Per retained earnings changes |
+
+*Note: The filing text provided is primarily XBRL tagging/metadata rather than the human-readable financial statements. Specific dollar figures are embedded in the instance document but not rendered in the text provided. The structural tags confirm all key line items (oil, gas, NGL revenues, net income, EPS) were reported across all comparative periods.*
+
+**Key observations from structure:**
+- Revenue is broken into four streams: Oil & Condensate, Natural Gas, NGLs, and Other Revenues
+- Balance sheet data as of 9/30/2025 vs. 12/31/2024
+- Quarterly equity rollforward confirms net income was booked each quarter in 2025 (Q1, Q2, Q3)
+
+---
+
+## **Production & Operations**
+
+**Acquisitions — Major 2025 Activity:**
+
+1. **Franklin Mountain Energy (FME) Acquisition** — Closed **January 27, 2025**
+   - Significant Permian Basin bolt-on acquisition
+   - Revenue and operating results consolidated from January 28, 2025 onward
+   - Pro forma combined results (FME + Avant) disclosed for Q3 2024 and 9M 2024/2025 periods
+
+2. **Avant Acquisition** — Closed **January 17, 2025**
+   - Consolidated from January 18, 2025 onward
+   - Combined pro forma disclosures with FME suggest meaningful production additions
+
+**Capital Expenditure:**
+- Significant capital activity implied by increases in proved and unproved oil & gas properties, and gathering/pipeline systems between 12/31/2024 and 9/30/2025 (both organic capex and acquisition-related)
+
+**Property Categories (Balance Sheet):**
+- Proved oil and gas properties
+- Unproved oil and gas properties
+- Gathering and pipeline systems
+- Land, buildings, and other equipment
+
+---
+
+## **Guidance & Outlook**
+
+**Hedging Program (Forward Guidance Proxy):**
+The filing discloses an extensive hedging book extending through **Q4 2026**, indicating management's production and pricing expectations:
+
+- **WTI Oil Collars**: Hedged Q4 2025 through Q4 2026
+- **WTI NYMEX Oil Swaps**: Hedged Q4 2025 through Q4 2026
+- **WTI Midland Oil Basis Swaps**: Hedged Q4 2025 through Q4 2026
+- **NYMEX Gas Collars**: Hedged Q4 2025 through Q4 2026
+- **Leidy Basis Swaps** (Marcellus gas): Hedged Q4 2025 through Q4 2026
+- **Zone 6 Non-NY Basis Swaps**: Hedged Q4 2025 through Q4 2026
+
+This broad hedging across both Permian oil and Marcellus gas confirms continued **dual-basin production** strategy with meaningful volumes protected.
+
+---
+
+## **Risks & Concerns**
+
+1. **Commodity Price Exposure**: Despite hedging, significant un
