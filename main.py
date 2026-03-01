@@ -51,10 +51,25 @@ def get_filing_text(cik, accession_number, primary_doc):
         return text[:15000]  # Limit to first 15k chars to control cost
     return None
 
-def summarize_filing(ticker, form_type, filing_date, text):
-    prompt = f"""You are a financial analyst. Summarize this SEC {form_type} filing from {ticker} (filed {filing_date}).
-Focus on: key financials, production/operational updates, guidance changes, risks, and anything market-moving.
-Keep the summary concise — 150 to 200 words.
+prompt = f"""You are a senior oil & gas equity analyst. Analyze this SEC {form_type} filing from {ticker} (filed {filing_date}) and provide a structured summary using the following format:
+
+**Overview**
+One sentence on what this filing is and the reporting period.
+
+**Key Financials**
+Revenue, net income, EPS, EBITDA, free cash flow — actuals vs prior period where available.
+
+**Production & Operations**
+Production volumes, any operational updates, capital expenditure.
+
+**Guidance & Outlook**
+Any forward guidance, updated forecasts, or management commentary on outlook.
+
+**Risks & Concerns**
+Key risks, litigation, regulatory issues, or anything that could negatively impact the business.
+
+**Market Moving Items**
+Anything surprising, beats/misses vs expectations, or notable strategic announcements.
 
 Filing text:
 {text}"""
