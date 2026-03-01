@@ -15,16 +15,30 @@ def generate_html():
     # Convert markdown to basic HTML
     html_entries = []
     entries = summaries.strip().split("\n---\n")
-    for entry in entries:
+for entry in entries:
         if not entry.strip():
             continue
         lines = entry.strip().split("\n")
         title = lines[0].replace("## ", "").strip()
         body = "\n".join(lines[2:]).strip()
+
+        # Convert **Section** headers to styled HTML
+        import re
+        body = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', body)
+
+        # Convert each section into its own block
+        sections = re.split(r'(<strong>.+?</strong>)', body)
+        formatted = ""
+        for i, section in enumerate(sections):
+            if section.startswith("<strong>"):
+                formatted += f'<h3>{section.replace("<strong>", "").replace("</strong>", "")}</h3>'
+            elif section.strip():
+                formatted += f'<p>{section.strip()}</p>'
+
         html_entries.append(f"""
         <div class="card">
             <h2>{title}</h2>
-            <p>{body}</p>
+            {formatted}
         </div>
         """)
 
