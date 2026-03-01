@@ -48,18 +48,47 @@
             color: #888;
             margin-bottom: 20px;
         }
+        .filter-bar {
+            margin-bottom: 20px;
+        }
+        .filter-bar label {
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 8px;
+            color: #555;
+        }
+        .filter-bar select {
+            font-size: 0.9em;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>SEC Filing Summaries</h1>
     <p class="subtitle">Peer companies: PR | FANG | MTDR | CTRA | DVN | SM</p>
+    <div class="filter-bar">
+        <label for="company-filter">Filter by company:</label>
+        <select id="company-filter" onchange="filterCards(this.value)">
+            <option value="ALL">All</option>
+            <option value="CTRA">CTRA</option>
+            <option value="DVN">DVN</option>
+            <option value="FANG">FANG</option>
+            <option value="MTDR">MTDR</option>
+            <option value="PR">PR</option>
+            <option value="SM">SM</option>
+        </select>
+    </div>
     
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Risks & Concerns**</h2>
             <p>1.</p><h3>Commodity Price Exposure</h3><p>: Despite hedging, significant un</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Guidance & Outlook**</h2>
             <h3>Hedging Program (Forward Guidance Proxy):</h3><p>The filing discloses an extensive hedging book extending through</p><h3>Q4 2026</h3><p>, indicating management's production and pricing expectations:
 
@@ -73,7 +102,7 @@
 This broad hedging across both Permian oil and Marcellus gas confirms continued</p><h3>dual-basin production</h3><p>strategy with meaningful volumes protected.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Production & Operations**</h2>
             <h3>Acquisitions — Major 2025 Activity:</h3><p>1.</p><h3>Franklin Mountain Energy (FME) Acquisition</h3><p>— Closed</p><h3>January 27, 2025</h3><p>- Significant Permian Basin bolt-on acquisition
    - Revenue and operating results consolidated from January 28, 2025 onward
@@ -86,7 +115,7 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 - Land, buildings, and other equipment</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Key Financials**</h2>
             <p>Based on the XBRL tags and filing structure, the following can be extracted:
 
@@ -104,17 +133,17 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 - Quarterly equity rollforward confirms net income was booked each quarter in 2025 (Q1, Q2, Q3)</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Overview**</h2>
             
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 10-Q — 2025-11-04</h2>
             <p># CTRA (Coterra Energy) — Q3 2025 10-Q Filing Analysis</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Market Moving Items</h2>
             <h3>Key Takeaways for Investors:</h3><p>1.</p><h3>Oil hedges provided meaningful uplift (+$2.18/Bbl):</h3><p>The $57 million net hedge gain is a positive signal, but it also underscores that unhedged realizations were weak. As hedge books roll off, future quarters may not benefit from this tailwind.
 
@@ -125,7 +154,7 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 4.</p><h3>Limited information filing:</h3><p>This is a preliminary pricing-only 8-K ahead of the full earnings release. It signals management wanted to provide early transparency on a weaker-than-expected pricing quarter — which itself may be a soft negative signal.</p><h3>Analyst View:</h3><p>The filing paints a picture of a challenging commodity backdrop in Q4 2025. The hedge book provided a buffer, but the underlying unhedged realizations — particularly for oil — suggest downward pressure on earnings and cash returns. Investors should watch the full Q4 release closely for production volumes, capex, and 2026 guidance to assess whether CTRA can sustain its capital return framework in a lower-price environment.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Risks & Concerns</h2>
             <p>-</p><h3>Natural gas at $2.37/Mcf (ex-hedges)</h3><p>remains subdued, though improved from the deeply depressed levels seen in 2024. This continues to weigh on Coterra's Marcellus segment economics.
 -</p><h3>NGL pricing at $15.63/Bbl</h3><p>is very weak, reflecting continued oversupply in NGL markets and limited export/petrochemical demand uplift.
@@ -133,17 +162,17 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 - Standard forward-looking statement disclaimers reference risks detailed in the 10-K.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Guidance & Outlook</h2>
             <p>- Full guidance updates are expected with the Q4/FY2025 earnings release.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Production & Operations</h2>
             <p>-</p><h3>No capital expenditure or operational updates</h3><p>were included.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Key Financials</h2>
             <p>| Metric | Excluding Hedges | Including Hedges |
 |--------|----------------:|----------------:|
@@ -155,17 +184,17 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 - The $2.18/Bbl positive hedge impact on oil and $0.07/Mcf on gas confirm that Coterra's hedge book provided meaningful downside protection in a weaker commodity price environment.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Overview</h2>
             
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 8-K — 2026-01-21</h2>
             <p># CTRA (Coterra Energy Inc.) — 8-K Filing Analysis</p><h3>Filed:</h3><p>January 21, 2026</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Risks & Concerns</h2>
             <p>1.</p><h3>Integration Risk:</h3><p>Three major acquisitions in rapid succession (Endeavor in 2024, Double Eagle and TRP in late 2024/early 2025) create meaningful execution and integration risk.
 2.</p><h3>Leverage / Balance Sheet:</h3><p>Significant acquisition activity likely increased debt levels; the filing references VIE assets/liabilities for Viper.
@@ -174,14 +203,14 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 5.</p><h3>WTG Midstream Disposition:</h3><p>Diamondback sold its interest in WTG Midstream to</p><h3>Energy Transfer LP</h3><p>(closed July 15, 2024), with ongoing</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Guidance & Outlook</h2>
             <p>- No explicit forward guidance language is extractable from the XBRL metadata provided. However, the</p><h3>sheer volume of acquisitions</h3><p>(Double Eagle, TRP, Viper/Sitio) signals management is aggressively building long-duration Permian inventory.
 -</p><h3>Viper Energy / Sitio Merger (Announced June 2, 2025):</h3><p>Viper is acquiring Sitio Royalties in a transaction encompassing mineral/royalty interests across the</p><h3>Permian Basin, Denver-Julesburg, Eagle Ford, and Williston Basins</h3><p>. This deal, if closed, would make Viper one of the largest mineral-rights companies in the U.S.
 - The Sitio deal includes a</p><h3>minimum and maximum consideration structure</h3><p>, suggesting contingent pricing or a collar mechanism.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Production & Operations</h2>
             <p>-</p><h3>Basin Exposure:</h3><p>Operations span the</p><h3>Midland Basin</h3><p>and</p><h3>Delaware Basin</h3><p>— the two premier sub-basins of the Permian.
 -</p><h3>Double Eagle Acquisition (Closed April 1, 2025):</h3><p>Diamondback acquired Double Eagle in an all-stock transaction, issuing FANG common shares. The acquisition added</p><h3>Midland Basin</h3><p>acreage with identified</p><h3>horizontal locations in primary development targets</h3><p>, significantly bolstering inventory depth.
@@ -190,7 +219,7 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 -</p><h3>Capital Expenditure:</h3><p>Not explicitly quantified in the XBRL extract, but significant drilling and completion activity implied by multiple well references and ongoing development across both basins.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>Key Financials</h2>
             <h3>Note:</h3><p>The filing text provided is XBRL metadata/tagging rather than the full financial statements, so exact dollar figures are limited. However, key structural observations can be drawn:
 
@@ -203,7 +232,7 @@ This broad hedging across both Permian oil and Marcellus gas confirms continued<
 The filing includes a</p><h3>Variable Interest Entity (VIE)</h3><p>— Viper Energy — consolidated as a primary beneficiary, with noncontrolling interest reflected on the balance sheet.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 10-Q — 2025-08-06</h2>
             <p># FANG (Diamondback Energy) 10-Q Analysis — Q2 2025 (Filed 2025-08-06)
 
@@ -211,14 +240,14 @@ The filing includes a</p><h3>Variable Interest Entity (VIE)</h3><p>— Viper Ene
 This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter ended June 30, 2025, covering a period of significant M&A activity including the Double Eagle acquisition and Viper Energy's pending Sitio Royalties merger.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Market Moving Items**</h2>
             <p>2.</p><h3>New Debt Issuance:</h3><p>Senior Notes due 2031 were issued on January 24, 2025, indicating proactive liability management and terming out maturities.
 3.</p><h3>2026 Notes Redemption:</h3><p>Partial redemptions on June 12 and September 20, 2025, demonstrate active deleveraging of near-term maturities.
 4. **Continued</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Risks & Concerns**</h2>
             <p>-</p><h3>Commodity Price Hedging:</h3><p>The company has crude oil swap positions across multiple periods (NYMEX WTI, non-designated hedges), which cap upside participation in rising oil prices.
 -</p><h3>Convertible Notes Settlement (September 12, 2025):</h3><p>The 2028 Convertible Notes were settled/converted, with Class A shares issued — dilutive to existing shareholders.
@@ -226,12 +255,12 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 -</p><h3>Noncontrolling Interest:</h3><p>The Up-C structure adds complexity to earnings attribution and potential future unit conversions (dilution).</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Guidance & Outlook**</h2>
             
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Production & Operations**</h2>
             <p>-</p><h3>June 16, 2025 Bolt-On Acquisition:</h3><p>Acquired leasehold acres with allocation to both proved and unproved properties, continuing the company's Permian Basin consolidation strategy.
   -</p><h3>Additional 2025 acquisitions</h3><p>are referenced for the nine-month period.
@@ -240,7 +269,7 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 -</p><h3>CapEx:</h3><p>Not extractable from XBRL tags alone, but the active drilling program and acquisitions suggest continued significant capital deployment.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Key Financials**</h2>
             <p>-</p><h3>Revenue, Net Income, EPS, EBITDA, Free Cash Flow:</h3><p>Specific dollar amounts are not extractable from the XBRL instance tags provided. The filing covers both Q3 2025 (July 1–September 30, 2025) and the nine-month YTD period (January 1–September 30, 2025), with comparative periods for Q3 2024 and YTD 2024.
 -</p><h3>Capital Structure:</h3><p>The company maintains a dual-class share structure (Class A and Class C common stock), with noncontrolling interest — consistent with an Up-C corporate structure.
@@ -254,18 +283,18 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
   - Senior Notes due 2033</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Overview**</h2>
             
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — 10-Q — 2025-11-06</h2>
             <p># Permian Resources (PR) — 10-Q Filing Analysis
 ## Quarter Ended September 30, 2025 (Filed November 6, 2025)</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 8-K — 2025-11-17</h2>
             <h3>Overview</h3><p>SM Energy Company filed an 8-K on November 17, 2025, announcing additional details regarding its planned all-stock merger with Civitas Resources, Inc., along with a joint press release, joint investor presentation, and disclosure of upcoming investor conference participation.</p><h3>Key Financials</h3><p>No new financial results (revenue, net income, EPS, EBITDA, or free cash flow) were reported in this filing. This is a Regulation FD disclosure related to the merger, not a periodic earnings report. The filing references plans to continue paying a fixed quarterly dividend of $0.20 per share post-close.</p><h3>Production & Operations</h3><p>No specific production volumes, operational metrics, or capital expenditure figures were disclosed in the 8-K body text. Pro forma operational details of the combined company are contained in the referenced Exhibit 99.2 (joint investor presentation), which was not included in the extracted filing text.</p><h3>Guidance & Outlook</h3><p>-</p><h3>Asset Divestitures:</h3><p>SM Energy plans to divest at least</p><h3>$1 billion of assets within one year of closing</h3><p>the merger.
 -</p><h3>Synergies:</h3><p>Management expects cost synergies and margin improvements from the combination, though specific dollar amounts are not detailed in the 8-K text itself.
@@ -285,7 +314,7 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 -</p><h3>No Financial Surprises:</h3><p>The filing contains no earnings data or revised guidance, so there are no beats/misses to assess. The market-moving element is purely strategic (merger progression and additional deal details).</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Guidance & Outlook**</h2>
             <h3>Hedging Program (Forward View):</h3><p>Devon's derivative positions provide a window into expected production volumes and price risk management:
 
@@ -296,7 +325,7 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 |</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Production & Operations**</h2>
             <h3>Operational Footprint:</h3><p>-</p><h3>Delaware Basin</h3><p>(primary) — referenced via Waha natural gas basis swaps and Midland sweet oil differentials
 -</p><h3>Williston Basin</h3><p>— acquired September 27, 2024 (Grayson Mill acquisition); now fully integrated into operations
@@ -306,7 +335,7 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 -</p><h3>Water JV</h3><p>and</p><h3>Catalyst</h3><p>midstream investments also noted on the balance sheet</p><h3>Capital Expenditure:</h3><p>- Not explicitly quantified in the XBRL tags provided, but exploration expenses are broken out for both periods, and significant upstream capital deployment is implied by the active drilling program across Delaware and Williston basins</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Key Financials**</h2>
             <p>While the filing text provided consists primarily of XBRL taxonomy tags rather than fully rendered financial statements, the following key financial elements can be extracted and inferred:
 
@@ -321,17 +350,17 @@ This is Diamondback Energy's (FANG) quarterly 10-Q filing for the second quarter
 -</p><h3>Subsequent Event (Sep 2025):</h3><p>Devon appears to be issuing or redeeming senior notes, suggesting active liability management</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>**Overview**</h2>
             
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 10-Q — 2025-08-06</h2>
             <p># Devon Energy (DVN) 10-Q Analysis — Q2 2025 (Filed August 6, 2025)</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 425 — 2025-11-21</h2>
             <p># SM Energy (SM) – Stephens Investment Conference Summary (Nov 20, 2025)
 
@@ -357,7 +386,7 @@ SM Energy is in the process of merging with</p><h3>Civitas Resources (CIVI)</h3>
 -</p><h3>Colorado regulatory environment</h3><p>acknowledged but deemed manageable — permitting</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — S-4 — 2025-12-05</h2>
             <p># SM Energy (SM) S-4 Filing Summary — December 5, 2025
 
@@ -366,7 +395,7 @@ SM Energy is in the process of merging with</p><h3>Civitas Resources (CIVI)</h3>
 - Both special meetings will be virtual, with dates TBD (expected early 2026).</p><h3>Risks:</h3><p>Fixed exchange ratio exposes both shareholder bases to market price fluctuations; regulatory approvals, integration risk, and commodity price volatility are standard concerns. The filing references a detailed risk factors section.</p><h3>Market-Moving Takeaway:</h3><p>This is a major consolidation play in the DJ Basin/Permian, significantly scaling SM Energy's operations. The majority ownership by Civitas shareholders signals substantial dilution for existing SM holders.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — S-4/A — 2025-12-17</h2>
             <p># SM Energy (SM) – S-4/A Filing Summary (Dec. 17, 2025)
 
@@ -385,12 +414,12 @@ SM Energy is acquiring</p><h3>Civitas Resources (CIVI)</h3><p>in an all-stock me
 - Integration risks typical of large E&P combinations apply.</p><h3>No updated financials, production data, or guidance changes</h3><p>were included in the excerpted filing text; substantive financial details likely reside in the full proxy/prospectus sections.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 8-K — 2025-10-02</h2>
             <p>## Devon Energy (DVN) 8-K Summary — Filed October 2, 2025</p><h3>Filing Type:</h3><p>Corporate governance update (Item 5.02) — No financial, operational, or guidance changes.</p><h3>Key Event:</h3><p>Devon's Board of Directors elected</p><h3>Brent J. Smolik</h3><p>as a new director, effective October 1, 2025. He will serve on the</p><h3>Audit</h3><p>and</p><h3>Safety, Operations, and Resource Committees</h3><p>.</p><h3>Compensation Details:</h3><p>Smolik will receive standard non-management director compensation and a restricted stock grant valued at</p><h3>$154,384</h3><p>(based on the October 9, 2025 closing price), vesting 100% the day after grant. He also entered the company's standard director indemnity agreement.</p><h3>Related-Party Transactions:</h3><p>None disclosed. No arrangements or understandings with any other person regarding the appointment.</p><h3>Market Impact Assessment:</h3><h3>Minimal.</h3><p>This is a routine board appointment with no changes to financials, production guidance, capital allocation, or operational strategy. The restricted stock grant is immaterial relative to Devon's market capitalization.</p><h3>Risks/Notable Items:</h3><p>None flagged in this filing. Investors should look to upcoming quarterly earnings for production updates and guidance revisions. No indication this board change signals strategic shifts.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 8-K — 2025-11-05</h2>
             <p># Devon Energy (DVN) — 8-K Filing Summary (November 5, 2025)</p><h3>Filing Type:</h3><p>Item 2.02 — Results of Operations and Financial Condition</p><h3>Key Details:</h3><p>Devon Energy filed an 8-K on November 5, 2025, announcing its</p><h3>Q3 2025 financial and operational results</h3><p>(quarter ended September 30, 2025). The filing references an earnings release (Exhibit 99.1) and supplemental financial information including updated guidance and hedging data (Exhibit 99.2); however, the actual content of these exhibits is not included in the filing text provided.</p><h3>What We Know:</h3><p>- The filing is a standard quarterly earnings announcement wrapper.
 - Supplemental materials include</p><h3>forward guidance and hedging positions</h3><p>, which are typically market-moving for E&P companies.
@@ -398,14 +427,14 @@ SM Energy is acquiring</p><h3>Civitas Resources (CIVI)</h3><p>in an all-stock me
 - Documents are furnished (not filed), meaning they are not subject to Section 18 liability — a standard treatment for earnings releases.</p><h3>Limitations:</h3><p>Without the actual earnings release and supplemental data (Exhibits 99.1 and 99.2), specific financials, production volumes, capital expenditure details, guidance changes, and risk disclosures</p><h3>cannot be assessed</h3><p>. Investors should review the full exhibits on Devon's website or SEC EDGAR for production figures, per-share earnings, cash flow, and any guidance revisions.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 425 — 2026-02-03</h2>
             <p># Summary of CTRA SEC 425 Filing (February 3, 2026)
 
 ## Devon Energy–Coterra Energy Merger Announcement</p><h3>Deal Overview:</h3><p>Devon Energy (DVN) and Coterra Energy (CTRA) announced an all-stock merger to create what they describe as the "premier shale operator." The combined entity will operate under the Devon Energy name, headquartered in Houston. Expected close: Q2 2026, subject to shareholder and regulatory approvals.</p><h3>Key Financials:</h3><p>The companies target</p><h3>$1 billion in merger synergies</h3><p>from capital optimization, operating margin improvements, and corporate cost reductions — notably</p><h3>in addition to</h3><p>Devon's existing $1 billion "Project Edge" cost-reduction target by end of 2026. A portion of synergies will come from workforce reductions across both companies.</p><h3>Leadership:</h3><p>Clay Gaspar (Devon) will serve as President & CEO; Tom Jorden (Coterra) becomes Non-Executive Board Chairman. Several Devon executives will depart post-close.</p><h3>Risks:</h3><p>Regulatory/shareholder approval uncertainty, integration execution risk, potential employee disruption, and commodity cycle exposure. No change-of-control provisions triggered, which may concern employees holding equity awards.</p><h3>Market-Moving Takeaways:</h3><p>The $2 billion combined synergy/cost target (Edge + merger) is aggressive. Scale consolidation in the Permian, Anadarko, Marcellus, and Eagle Ford strengthens the combined portfolio, but workforce cuts and Houston HQ relocation signal significant restructuring ahead.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 10-Q — 2025-11-05</h2>
             <p># Diamondback Energy (FANG) — Q3 2025 10-Q Summary</p><h3>Note:</h3><p>The filing text provided contains only XBRL metadata/tags without the actual financial statements, narrative disclosures, or numerical data. However, key events can be inferred from the tagged transactions:
 
@@ -427,7 +456,7 @@ Commodity price volatility, integration execution across multiple acquisitions, 
 *Full financial metrics unavailable from provided XBRL tags alone.*</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 8-K — 2026-01-20</h2>
             <p># SM Energy (SM) 8-K Summary – Filed January 20, 2026
 
@@ -448,12 +477,12 @@ The filing responds to</p><h3>multiple stockholder demand letters</h3><p>allegin
 The merger timeline remains intact with no guidance changes. The significant combined debt load (~$7.5B) and</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 425 — 2026-02-06</h2>
             <p>## Summary of SEC 425 Filing — Coterra Energy (CTRA) / Devon Energy Merger</p><h3>Filed:</h3><p>February 6, 2026, by Devon Energy pursuant to Rule 425</p><h3>Key Transaction Details:</h3><p>Devon Energy and Coterra Energy have entered a</p><h3>definitive all-stock merger agreement</h3><p>creating a leading large-cap shale operator. The combined enterprise value is approximately</p><h3>$58 billion</h3><p>. Devon shareholders will own ~</p><h3>54%</h3><p>and Coterra shareholders ~</p><h3>46%</h3><p>of the combined entity on a fully diluted basis. The deal is expected to close in</p><h3>Q2 2026</h3><p>, pending regulatory and shareholder approvals.</p><h3>Strategic Rationale & Synergies:</h3><p>The merger anchors around a</p><h3>premier Delaware Basin position</h3><p>and is expected to generate</p><h3>$1 billion in annual pre-tax synergies</h3><p>by leveraging complementary strengths.</p><h3>Key Risks Highlighted:</h3><p>Regulatory/antitrust approval delays or conditions; integration execution risk; synergy shortfalls; commodity price volatility (including tariff-related impacts); midstream capacity constraints; cybersecurity; litigation; and potential management distraction during the transition.</p><h3>Market-Moving Takeaways:</h3><p>The $1B synergy target and 54/46 ownership split define valuation expectations. Investors should watch for the S-4 registration filing and joint proxy statement for detailed pro forma financials, and monitor regulatory review timelines closely as the Q2 close target approaches.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 425 — 2026-02-02</h2>
             <p># DVN–CTRA Merger Summary (Filed 2026-02-02)
 
@@ -475,7 +504,7 @@ Closing requires shareholder approval from both companies, HSR antitrust clearan
 This creates a</p><h3>major diversified E&P</h3><p>, combining Devon's oil-weighted assets with Coterra's natural gas exposure.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-01-08</h2>
             <p># SEC Form 4 Summary — Matador Resources (MTDR)</p><h3>Filing Date:</h3><p>January 8, 2026 |</p><h3>Insider:</h3><p>Bryan A. Erman, Co-President, CLO & Head of M&A
 
@@ -489,7 +518,7 @@ This is an</p><h3>insider ownership filing</h3><p>(Form 4), not an earnings or o
 The</p><h3>58% PSU payout</h3><p>signals underperformance versus peers on total shareholder return over 2023–2025. No voluntary selling occurred, which is neutral-to-positive for sentiment. This filing contains</p><h3>no production updates, guidance changes, or financial results</h3><p>— it is purely an insider compensation/ownership disclosure.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-01-08</h2>
             <p># SEC Form 4 Summary — Matador Resources (MTDR)</p><h3>Filing Date:</h3><p>January 8, 2026 |</p><h3>Insider:</h3><p>Robert T. Macalik, EVP & Chief Financial Officer
 
@@ -506,14 +535,14 @@ The</p><h3>58% PSU payout</h3><p>signals underperformance versus peers on total 
 The 58% PSU payout signals MTDR</p><h3>underperformed peers on total shareholder return</h3><p>over 2023–2025. No production, guidance, or financial updates are included — this is strictly an insider compensation disclosure. The transaction is routine and non-discretionary.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — S-8 POS — 2026-01-07</h2>
             <p>## Permian Resources (PR) — S-8 POS Filing Summary (Jan. 7, 2026)</p><h3>Filing Type:</h3><p>Post-Effective Amendment to six Form S-8 Registration Statements — purely administrative/corporate housekeeping.</p><h3>Key Event:</h3><p>Permian Resources completed a</p><h3>holding company reorganization</h3><p>effective January 7, 2026, pursuant to a Master Reorganization Agreement dated December 22, 2025. A new parent entity ("New PR," formally PRC NewCo Inc.) replaced the old Permian Resources Corporation as the publicly traded company on the NYSE under the same ticker</p><h3>"PR."</h3><p>The former entity became a wholly owned subsidiary.</p><h3>What Happened Mechanically:</h3><p>New PR assumed all equity compensation plans (2023 LTIP, legacy Centennial 2016 LTIP, and 2019 ESPP). All outstanding restricted stock, RSU, PSU, and option awards were converted 1-for-1 into New PR shares. The filing</p><h3>deregisters all unsold/unissued Old PR shares</h3><p>across six prior S-8 registrations (dating from 2016–2023) and terminates their effectiveness.</p><h3>Key Takeaways:</h3><p>-</p><h3>No financial, operational, production, or guidance information</h3><p>is disclosed.
 -</p><h3>No dilution event</h3><p>— this is a structural reorganization, not a new equity issuance.
 -</p><h3>Not market-moving</h3><p>— standard corporate restructuring for tax, liability, or governance optimization. No change to ticker, exchange listing, or outstanding share count.</p><h3>Signed by:</h3><p>CFO Guy M. Oliphint.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 8-K — 2026-01-27</h2>
             <p># SM Energy (SM) 8-K Summary — Filed January 27, 2026
 
@@ -535,7 +564,7 @@ SM Energy held a special stockholder meeting on January 27, 2026, where sharehol
 - Integration execution risk, potential management distraction, failure to achieve anticipated synergies, and possible cost overruns were highlighted. Market disruption from the transaction remains a stated concern.</p><h3>Bottom line:</h3><p>The decisive shareholder approval removes a major closing hurdle, making deal completion highly likely near-term — a significant catalyst for both SM and CIVI shareholders.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 425 — 2026-01-27</h2>
             <p># SM Energy (SM) – SEC 425 Filing Summary (January 27, 2026)
 
@@ -559,7 +588,7 @@ The S-4 registration statement was declared effective December 19, 2025, and the
 - Remaining regulatory/closing conditions still to be satisfied</p><h3>No specific financial results, production updates, or guidance changes were disclosed in this filing.</h3>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 8-K — 2026-01-30</h2>
             <p># SM Energy (SM) – 8-K Summary (Filed Jan 30, 2026)
 
@@ -579,7 +608,7 @@ SM Energy consummated its previously announced merger with Civitas Resources on 
 The substantial increase in leverage (~$4.85B in assumed notes plus expanded revolver) significantly changes SM's balance sheet profile. High coupon rates (8.375%–9.625%) on most assumed notes elevate interest expense. Integration execution risk is material. However, the enlarged asset base and borrowing capacity position SM as a considerably larger operator, likely enhancing scale economics across its combined portfolio</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — S-8 — 2026-01-30</h2>
             <p># SM Energy (SM) — S-8 Filing Summary (Filed 01/30/2026)
 
@@ -600,12 +629,12 @@ This S-8 registers</p><h3>6,378,329 shares</h3><p>of SM Energy common stock ($0.
 - No updated financial guidance or production figures are included; investors should reference the incorporated pro forma financials from the December 2025 S-4 filing for combined company outlook.</p><h3>No new risk factors or operational updates beyond the merger completion itself.</h3>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 3 — 2026-02-02</h2>
             <p>## SEC Form 3 Summary — SM Energy Co (SM) | Filed 2026-02-02</p><h3>Filing Type:</h3><p>Form 3 — Initial Statement of Beneficial Ownership (insider disclosure, not a financial/operational filing).</p><h3>Key Details:</h3><h3>Reporting Person:</h3><p>Howard A. Willard, newly appointed</p><h3>Director</h3><p>of SM Energy Co, effective January 30, 2026.</p><h3>Holdings Disclosed:</h3><p>72,962 shares of SM Energy common stock ($.01 par value), held directly. No derivative securities reported.</p><h3>Critical Context — Civitas Merger:</h3><p>The shares were acquired through the completed</p><h3>merger of Civitas Resources (CIVI) into SM Energy</h3><p>. Per the merger agreement, each Civitas share converted into</p><h3>1.45 SM Energy shares</h3><p>, and outstanding Civitas deferred stock units (DSUs) fully vested and converted at the same ratio. Willard's holdings include vested DSUs settling in SM common stock upon board departure.</p><h3>Market-Moving Implications:</h3><p>This filing confirms the</p><h3>Civitas-SM Energy merger has closed</h3><p>, a transformative deal significantly expanding SM's asset base (likely Permian/DJ Basin consolidation). Willard appears to be a former Civitas director joining SM's board post-merger.</p><h3>Risks:</h3><p>Integration execution risk, potential dilution from merger share issuance, and post-merger board/governance transitions. No financial guidance or production updates are included in this filing type.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 425 — 2026-02-02</h2>
             <p># Devon Energy (DVN) – SEC 425 Filing Summary (Filed Feb 2, 2026)
 
@@ -626,19 +655,19 @@ The combined company retains the</p><h3>Devon Energy name and DVN ticker</h3><p>
 This is a</p><h3>transformational consolidation</h3><p>creating a diversified E&P giant combining Devon's Permian/multi-basin oil assets with Coterra's Marcellus gas and Permian positions. The all-stock structure and governance protections signal a merger-of-equals intent.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 425 — 2026-02-03</h2>
             <p># Summary: Devon Energy (DVN) SEC 425 Filing — February 3, 2026
 
 ## Merger Announcement: Devon Energy + Coterra Energy (CTRA)</p><h3>Deal Overview:</h3><p>Devon Energy and Coterra Energy announced an all-stock merger on February 2, 2026, expected to close in Q2 2026, pending regulatory and shareholder approvals. The combined entity will retain the Devon Energy name and be headquartered in Houston.</p><h3>Key Financials:</h3><p>The merger targets</p><h3>$1 billion in synergies</h3><p>from capital optimization, operating margin improvements, and corporate cost reductions—</p><h3>incremental</h3><p>to Devon's existing $1 billion "Project Edge" cost-reduction target by end of 2026. A portion of synergies will come from workforce reductions across both companies.</p><h3>Leadership:</h3><p>Clay Gaspar will serve as CEO; Coterra CEO Tom Jorden becomes Non-Executive Board Chairman. A blended executive team was announced.</p><h3>Operational Outlook:</h3><p>Business units will span the Permian, Anadarko, Eagle Ford, Marcellus, Powder River, and Williston basins, creating what the companies call the "premier shale operator" with a deep unconventional resource base.</p><h3>Risks:</h3><p>Regulatory/shareholder approval uncertainty, integration execution risk, potential workforce disruption, and commodity cycle exposure. No change-of-control triggered under existing Devon plans.</p><h3>Market-Moving Takeaway:</h3><p>The $1B incremental synergy target atop Project Edge and the scale of the combined multi-basin portfolio are the headline catalysts.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 425 — 2026-02-06</h2>
             <p>## Devon Energy (DVN) — SEC 425 Filing Summary (Feb 6, 2026)</p><h3>Transaction Overview:</h3><p>Devon Energy and Coterra Energy have entered a definitive all-stock merger agreement, creating a premier large-cap shale operator. The combined enterprise value is approximately</p><h3>$58 billion</h3><p>. Devon shareholders will own</p><h3>~54%</h3><p>and Coterra shareholders</p><h3>~46%</h3><p>of the combined entity on a fully diluted basis. The deal is expected to close in</p><h3>Q2 2026</h3><p>, pending regulatory and shareholder approvals.</p><h3>Key Financial Highlight:</h3><p>The merger is expected to generate</p><h3>$1 billion in annual pre-tax synergies</h3><p>, leveraging complementary strengths and a premier Delaware Basin position.</p><h3>Strategic Rationale:</h3><p>The combination creates a high-quality asset base anchored in the economic core of the Delaware Basin, enhancing scale and operational efficiency.</p><h3>Key Risks:</h3><p>Regulatory/antitrust approval delays or conditions; integration challenges; synergy shortfalls; commodity price volatility (including tariff-related impacts); midstream capacity constraints; cybersecurity; potential litigation; and management distraction during the transition period.</p><h3>Market-Moving Takeaways:</h3><p>This is a transformational consolidation in U.S. shale. The $1B synergy target and significant Delaware Basin concentration should attract investor attention. Execution risk on integration and regulatory timelines remain the primary near-term uncertainties. No updated production guidance or standalone financials were provided in this filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Summary — Devon Energy (DVN), Filed 02/12/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4) — not an earnings or operational filing.</p><h3>Reporting Person:</h3><p>Dennis C. Cameron, EVP and General Counsel</p><h3>Key Transactions (02/10/2026):</h3><p>-</p><h3>Disposed of 15,956 shares</h3><p>via five separate "F" transactions (tax withholding on vesting equity) at</p><h3>$43.48/share</h3><p>, totaling ~$693K in value surrendered.
 -</p><h3>Acquired 23,920 restricted shares</h3><p>at $0 cost as a new equity compensation grant, vesting 25% annually over four years (Feb 2027–2030).
@@ -646,7 +675,7 @@ This is a</p><h3>transformational consolidation</h3><p>creating a diversified E&
 - DVN's stock price at transaction was</p><h3>$43.48</h3><p>, providing a market reference point.</p><h3>Bottom Line:</h3><p>Non-material, standard executive compensation activity. No signal of insider sentiment shift or operational developments.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Filing Summary — Devon Energy (DVN)</p><h3>Filing Date:</h3><p>February 12, 2026</p><h3>Insider:</h3><p>Tana K. Cashion, EVP Human Resources and Administration
 
@@ -663,7 +692,7 @@ This is a</p><h3>routine insider transaction filing</h3><p>(Form 4), not an earn
 -</p><h3>DVN's stock price reference point:</h3><p>$43.48 as of the transaction date.</p><h3>No risks, guidance changes, or operational updates are disclosed in this filing.</h3>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-09</h2>
             <p>## SEC Form 4 Summary — Coterra Energy (CTRA) | Filed 02/09/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4) — not a quarterly/annual earnings filing.</p><h3>Reporting Person:</h3><p>Blake A. Sirgo, EVP – Business Units</p><h3>Key Transaction Details:</h3><p>- On 02/05/2026, Sirgo acquired</p><h3>29,348 shares</h3><p>of CTRA common stock at $0 cost through the vesting/conversion of performance share awards originally granted on 02/21/2023.
 -</p><h3>11,549 shares</h3><p>were withheld by the company at</p><h3>$28.85/share</h3><p>to cover tax obligations — this was not an open-market sale.
@@ -671,7 +700,7 @@ This is a</p><h3>routine insider transaction filing</h3><p>(Form 4), not an earn
 - The Compensation Committee certified</p><h3>full achievement</h3><p>of performance criteria, resulting in 100% conversion (one-for-one) into common stock.</p><h3>Market Implications:</h3><p>- This is a routine insider compensation event,</p><h3>not an open-market purchase or sale</h3><p>, and is unlikely to be market-moving. However, full vesting of performance shares signals management's delivery on multi-year operational targets, a modestly positive signal for shareholders.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 425 — 2026-02-19</h2>
             <p># Summary of SEC 425 Filing – Coterra Energy (CTRA) / Devon Energy Merger</p><h3>Filed: February 19, 2026</h3><p>## Key Transaction Details
 Devon Energy and Coterra Energy announced a merger on February 2, 2026, with expected closing in Q2 2026. Devon will be the surviving entity and brand. Coterra shareholders will receive Devon shares (S-4 registration pending). Devon will hold the majority of shares and board seats, meaning this does</p><h3>not</h3><p>trigger change-of-control provisions.
@@ -691,14 +720,14 @@ The companies target</p><h3>$1 billion in merger synergies</h3><p>from capital o
 The $1 billion incremental synergy target and dual-company cost reduction trajectory are the most market-relevant disclosures.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 425 — 2026-02-19</h2>
             <p># Summary: Devon Energy–Coterra Energy Merger Integration Update (SEC 425 Filing, Feb 19, 2026)
 
 ## Key Takeaways</p><h3>Merger Integration Officially Launched:</h3><p>Devon Energy (DVN) and Coterra Energy (CTRA) have formally kicked off merger integration planning, engaging McKinsey & Co. as an external integration partner. The effort is co-led by Devon's Trey Lowe (SVP/CTO) and Coterra's Blake Sirgo (EVP, Business Units).</p><h3>Integration Structure:</h3><p>Six dedicated workstreams have been established — Master Planning, Synergy/Value Capture, Org Design & Talent, Culture/Change Management, Technology & AI Roadmap, and Capital Allocation — each with named DVN and CTRA leads, signaling serious organizational alignment efforts.</p><h3>Closing Timeline:</h3><p>The companies continue to project a</p><h3>Q2 2026 close</h3><p>, pending regulatory and shareholder approvals. Until then, both operate independently.</p><h3>Strong Q4 Results Referenced:</h3><p>CEO Clay referenced strong Q4 earnings and EDGE program accomplishments, though specific financials were not detailed in this filing.</p><h3>Risks:</h3><p>Key risks include regulatory/approval delays, integration execution challenges, failure to realize anticipated synergies, commodity price volatility, tariff/trade policy uncertainty, and employee retention during transition.</p><h3>Market-Moving Implications:</h3><p>The formal integration launch and McKinsey engagement signal accelerating momentum toward close and synergy capture, reinforcing management's commitment to creating a combined E&P "powerhouse."</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 425 — 2026-02-19</h2>
             <p># Coterra Energy (CTRA) — SEC 425 Filing Summary (Feb. 19, 2026)
 
@@ -714,7 +743,7 @@ This filing is an internal communication announcing the formal launch of merger 
 - Companies operate independently until close.</p><h3>Market-Moving Takeaways:</h3><p>No updated financials, production data, or guidance changes were disclosed. The filing is procedural but confirms the deal remains on track for Q2 close and signals urgency around</p><h3>unlocking synergies</h3><p>. Investors should watch for the S-4 registration statement and joint proxy for deal economics and synergy targets.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 8-K — 2026-02-26</h2>
             <p># CTRA (Coterra Energy) 8-K Filing Summary — February 26, 2026
 
@@ -726,7 +755,7 @@ This filing is an internal communication announcing the formal launch of merger 
 - Management distraction during the transaction period</p><h3>Guidance/Outlook:</h3><p>No explicit updated production or capital guidance was provided in the 8-K body; investors are directed to the accompanying press release.</p><h3>Bottom Line:</h3><p>The Devon-Coterra merger announcement is the dominant signal — a major consolidation play with significant execution and regulatory risk but potentially substantial synergies.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-01-08</h2>
             <p># SEC Form 4 Summary — Matador Resources (MTDR)</p><h3>Filing Date:</h3><p>January 8, 2026 |</p><h3>Insider:</h3><p>Glenn W. Stetson, EVP-Production
 
@@ -747,7 +776,7 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not a 10-Q/10-K wi
 -</p><h3>No discretionary selling</h3><p>occurred — this is purely compensation-related activity with no bearish signaling.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 8-K — 2026-01-23</h2>
             <p># MTDR (Matador Resources) 8-K Summary — Filed 01/23/2026
 
@@ -767,26 +796,26 @@ Krug will transition to a</p><h3>Special Advisor</h3><p>role to the CEO and Exec
 -</p><h3>No successor was named</h3><p>, which investors may monitor in subsequent filings.</p><h3>Overall Impact: Low materiality.</h3><p>This is a routine retirement transition with no immediate financial implications.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 8-K — 2026-02-17</h2>
             <h3>Matador Resources (MTDR) — 8-K Summary (Filed 02/17/2026)</h3><h3>Key Event:</h3><p>Matador announced the declaration of a quarterly cash dividend on its common stock, consistent with the dividend policy adopted by its Board of Directors in October 2025.</p><h3>Key Details:</h3><p>- The filing is a Regulation FD disclosure (Item 7.01), meaning it is informational and not formally "filed" under the Exchange Act.
 - The specific dividend amount per share is referenced in the accompanying press release (Exhibit 99.1) but is not detailed in the 8-K body text itself.
 - Future dividend payments remain at the Board's discretion, contingent on results of operations, cash flows, financial position, capital requirements, general business conditions, and legal/tax/regulatory considerations.</p><h3>Operational/Guidance Updates:</h3><p>None provided in this filing. No production figures, earnings data, or guidance revisions were disclosed.</p><h3>Risks:</h3><p>The filing explicitly notes dividend continuation is not guaranteed and depends on multiple financial and business factors, signaling potential variability in shareholder returns.</p><h3>Market-Moving Takeaway:</h3><p>The dividend declaration reinforces MTDR's commitment to its shareholder return program initiated in late 2025, a modestly positive signal for income-oriented investors, though the lack of specific financial details limits the filing's informational value. Investors should reference the Exhibit 99.1 press release for the declared dividend amount and payment date.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p># SEC Form 4 Summary: Matador Resources (MTDR) — Filed 02/18/2026</p><h3>Reporting Person:</h3><p>Joseph Wm. Foran, Chairman and CEO</p><h3>Transaction Type:</h3><p>Insider compensation activity involving phantom stock units — no open-market buying or selling of common shares.</p><h3>Key Transactions (02/14–02/17/2026):</h3><p>-</p><h3>Vested & cash-settled:</h3><p>33,333 phantom units across three tranches (13,333 + 10,000 + 10,000), settled at</p><h3>$47.80/unit</h3><p>(based on 02/13/2026 closing price). Total cash payout: ~</p><h3>$1.59 million</h3><p>. No common shares were issued or sold.
 -</p><h3>New grant:</h3><p>70,000 phantom units awarded on 02/17/2026, vesting equally over three years. Each unit is economically equivalent to one share of MTDR common stock.</p><h3>Post-Transaction Holdings:</h3><p>Foran beneficially owns</p><h3>106,667 phantom units</h3><p>(26,667 + 10,000 + 70,000) in derivative form.</p><h3>Market Impact Assessment:</h3><h3>Low.</h3><p>This filing reflects routine executive compensation mechanics — scheduled vesting of prior awards and a new annual equity-based grant. No shares changed hands on the open market, and no guidance, production, or operational updates are disclosed. The $47.80 reference price provides a market snapshot. The sizable new 70,000-unit grant signals continued alignment of CEO compensation with shareholder value.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p>## SEC Form 4 Summary — Matador Resources (MTDR) | Filed 2/18/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4), not a quarterly/annual financial report. This covers changes in beneficial ownership for</p><h3>Van H. Singleton II</h3><p>, Co-President of Land, A&D, and Planning.</p><h3>Key Transactions (2/14–2/17/2026):</h3><p>-</p><h3>Phantom unit vestings and cash settlements:</h3><p>Singleton had three tranches of phantom units vest — 6,666, 5,000, and 5,000 units — all settled in</p><h3>cash at $47.80/unit</h3><p>(based on MTDR's 2/13/2026 closing price).</p><h3>No common shares were issued or sold.</h3><p>Total cash payout: ~$797,000.
 -</p><h3>New phantom unit grant:</h3><p>Singleton received</p><h3>35,000 new phantom units</h3><p>on 2/17/2026, vesting equally over three years. These are economically equivalent to common shares.</p><h3>Post-Transaction Holdings:</h3><p>13,334 + 5,000 + 35,000 =</p><h3>53,334 phantom units</h3><p>beneficially owned (direct).</p><h3>Market Implications:</h3><p>This filing is routine insider compensation activity — no open-market buying or selling of MTDR stock occurred. The sizable new 35,000-unit grant signals continued retention-based compensation for senior leadership.</p><h3>No production updates, guidance changes, financial results, or material risk disclosures</h3><p>are contained in this filing. MTDR's stock reference price of $47.80 provides a market snapshot.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — S-3ASR — 2025-11-21</h2>
             <p># Diamondback Energy (FANG) — S-3ASR Filing Summary (Nov 21, 2025)
 
@@ -809,7 +838,7 @@ This is a</p><h3>shelf registration statement</h3><p>(S-3ASR) allowing Diamondba
 - Standard</p><h3>risk factor</h3><p>warnings reference commodity prices, operations, and integration of recent acquisitions.</p><h3>Market impact: Limited.</h3><p>This is routine shelf registration, not an imminent capital raise.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 144 — 2025-11-26</h2>
             <p>## Summary: SEC Form 144 Filing — Diamondback Energy (FANG)</p><h3>Filing Type:</h3><p>Form 144 — Notice of Proposed Sale of Securities (Insider Sale)</p><h3>Key Details:</h3><p>-</p><h3>Insider:</h3><p>Daniel N. Wesson, Officer of Diamondback Energy, Inc.
 -</p><h3>Proposed Sale:</h3><p>4,000 shares of common stock at an aggregate market value of ~$596,948 (~$149.24/share), planned for approximately November 26, 2025.
@@ -818,14 +847,14 @@ This is a</p><h3>shelf registration statement</h3><p>(S-3ASR) allowing Diamondba
 -</p><h3>Shares outstanding:</h3><p>~286.5 million.</p><h3>Market Impact Assessment:</h3><p>This is a</p><h3>routine insider disposition</h3><p>representing a negligible fraction (~0.001%) of shares outstanding. The sale appears to be standard equity compensation monetization rather than a signal of material concern. The filer attested to having no knowledge of undisclosed material adverse information regarding FANG's operations.</p><h3>Key Takeaway:</h3><p>This filing contains</p><h3>no operational updates, guidance changes, production data, or financial results.</h3><p>It is purely a regulatory notice of a small insider stock sale. Investors should treat this as non-material for valuation purposes and focus on FANG's upcoming earnings and operational disclosures for substantive analysis.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 8-K — 2025-12-01</h2>
             <p>## Diamondback Energy (FANG) — 8-K Summary (Filed 12/1/2025)</p><h3>Key Event: Structured Share Repurchase Agreement</h3><p>Diamondback entered a letter agreement (dated 11/28/2025) with SGF FANG Holdings, LP granting SGF a</p><h3>put right to sell up to 3 million shares per quarter</h3><p>back to Diamondback through December 31, 2026, at the most recent NASDAQ closing price.</p><h3>Immediate Transaction:</h3><p>Diamondback repurchased</p><h3>2 million shares from SGF at $152.59/share</h3><p>(~$305 million), executed under its existing buyback program and approved by the audit committee.</p><h3>Buyback Program Update:</h3><p>Since September 30, 2025, FANG has repurchased</p><h3>2.886 million shares for ~$432 million total</h3><p>. Approximately</p><h3>$2.7 billion remains</h3><p>under its $8 billion repurchase authorization (excluding excise tax).</p><h3>Market-Moving Considerations:</h3><p>- The put arrangement creates a</p><h3>predictable overhang</h3><p>, as SGF could sell up to 12 million additional shares through 2026, potentially pressuring the stock.
 - SGF retains the right to sell shares through other channels (registered offerings, open market), adding further potential supply.
 - The aggressive buyback pace signals management's confidence in valuation and commitment to shareholder returns.</p><h3>No production, guidance, or operational updates were included in this filing.</h3>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 4 — 2025-12-01</h2>
             <p>## SEC Form 4 Summary — Diamondback Energy (FANG)</p><h3>Filing Type:</h3><p>Form 4 (Insider Transaction)</p><h3>Filing Date:</h3><p>December 1, 2025</p><h3>Insider:</h3><p>Daniel N. Wesson, Executive Vice President & COO
 
@@ -841,7 +870,7 @@ Wesson retains</p><h3>80,117 shares</h3><p>of direct beneficial ownership, with 
 -</p><h3>No production updates, guidance changes, or risk disclosures</h3><p>are included — Form 4 filings are strictly insider ownership disclosures, not operational reports.</p><h3>Bottom line:</h3><p>Routine, pre-planned insider sale with limited market-moving significance.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — SCHEDULE 13D/A — 2025-12-02</h2>
             <p># FANG (Diamondback Energy) — Schedule 13D/A Summary (Filed 12/02/2025)
 
@@ -858,7 +887,7 @@ On</p><h3>November 28, 2025</h3><p>, Diamondback entered a</p><h3>Repurchase Agr
 -</p><h3>No change in beneficial ownership</h3><p>is reported yet beyond the initial 2M-share sale; the arrangement creates</p><h3>potential overhang</h3><p>of up to 12M+ additional shares through 2026.</p><h3>Risk:</h3><p>Sustained insider selling pressure could weigh on share price sentiment.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — S-8 POS — 2026-01-07</h2>
             <p># Permian Resources (PR) — S-8 POS Filing Summary (Jan 7, 2026)
 
@@ -881,7 +910,7 @@ New PR is</p><h3>deregistering all unsold shares</h3><p>of Old PR's common stock
 - New PR will presumably file fresh S-8 registrations for its assumed equity plans</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — S-8 — 2026-01-07</h2>
             <p># Permian Resources Corporation (PR) — S-8 Filing Summary (Jan. 7, 2026)
 
@@ -899,7 +928,7 @@ This is a</p><h3>corporate reorganization and share registration filing</h3><p>,
 -</p><h3>No material operational risk factors</h3><p>introduced. Standard Delaware indemnification provisions apply.</p><h3>Bottom line:</h3><p>Routine corporate restructuring with no immediate market-moving content.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — S-3ASR — 2026-01-07</h2>
             <p># Permian Resources Corporation (PR) — S-3ASR Filing Summary (Jan 7, 2026)
 
@@ -920,17 +949,17 @@ Simultaneously, PR executed a</p><h3>Section 251(g) holding company reorganizati
 - Filing signals PR is</p><h3>positioning for opportunistic capital markets access</h3><p>, which could fund acquisitions, debt reduction, or development spending.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — POSASR — 2026-01-07</h2>
             <p>## Permian Resources (PR) — POSASR Filing Summary (Jan. 7, 2026)</p><h3>Filing Type:</h3><p>Post-Effective Amendment to deregister unsold securities and withdraw the Form S-3 Registration Statement (originally filed May 24, 2024).</p><h3>Key Event — Holding Company Reorganization:</h3><p>Permian Resources completed a corporate restructuring on January 7, 2026, establishing a new holding company ("Successor Registrant") as the direct parent of the prior entity. The reorganization was executed via a merger, with the original Permian Resources Corporation surviving as a wholly-owned subsidiary. Shareholders were converted one-for-one into equivalent shares of the new parent, which continues trading on the NYSE under ticker "PR."</p><h3>Financials/Guidance:</h3><p>No financial data, production updates, or guidance changes were disclosed in this filing — it is purely an administrative/legal document.</p><h3>Market Impact:</h3><p>Minimal. This is a routine housekeeping filing to clean up a now-obsolete shelf registration following the corporate reorganization. No new equity issuance, dilution, or capital-raising activity is indicated. The reorganization itself is a structural change (likely for tax, liability, or operational flexibility purposes) and does not alter the company's economic profile, asset base, or operations in the Permian Basin.</p><h3>Risks:</h3><p>None newly disclosed; investors should monitor subsequent filings from the Successor Registrant for updated risk factors and a new shelf registration.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — POSASR — 2026-01-07</h2>
             <p># Permian Resources (PR) — POSASR Filing Summary (Jan 7, 2026)</p><h3>Filing Type:</h3><p>Post-Effective Amendment to Form S-3 — Deregistration of unsold shares and withdrawal of registration statement.</p><h3>Key Action:</h3><p>Permian Resources completed a</p><h3>holding company reorganization</h3><p>on January 7, 2026, pursuant to a Master Reorganization Agreement dated December 22, 2025. A newly formed entity ("Successor Registrant," now trading as PR on NYSE) became the direct parent of the original Permian Resources Holdings Inc. via a merger. Existing stockholders received shares in the new parent on a</p><h3>one-for-one basis</h3><p>with no change in ownership percentage or class.</p><h3>Share Details:</h3><p>Of the original 334,064,083 Class A shares registered in November 2023,</p><h3>79,150,389 shares remained unsold</h3><p>and are being formally deregistered. The company is requesting SEC fee credits for future use.</p><h3>Market Impact:</h3><p>This is a</p><h3>routine corporate housekeeping filing</h3><p>— no new capital raise, no operational or financial updates, no guidance changes, and no new risk disclosures. The reorganization into a holding company structure is a common corporate simplification move with no direct impact on shareholders' economic interests.</p><h3>No material market-moving information</h3><p>is contained in this filing. Investors should monitor subsequent filings from the Successor Registrant for operational updates.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 3 — 2026-02-02</h2>
             <p># SEC Form 3 Summary — SM Energy Co (SM)</p><h3>Filing Type:</h3><p>Form 3 (Initial Statement of Beneficial Ownership) — filed 02/02/2026</p><h3>Reporting Person:</h3><p>Carrie M. Fox, newly appointed</p><h3>Director</h3><p>of SM Energy Co.
 
@@ -941,29 +970,29 @@ Simultaneously, PR executed a</p><h3>Section 251(g) holding company reorganizati
 The filing signals the</p><h3>Civitas merger is now closed</h3><p>, a transformational deal expanding SM Energy's Permian/DJ Basin footprint. Former Civitas directors (including Fox) are joining SM's board. Investors should monitor post-merger integration execution, updated production guidance, and potential balance sheet impacts from the combination. No financial guidance or risk disclosures are included in this insider ownership filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 3 — 2026-02-02</h2>
             <p>## SEC Form 3 Summary — SM Energy Co (SM) | Filed 2/2/2026</p><h3>Filing Type:</h3><p>Form 3 — Initial Statement of Beneficial Ownership (insider filing, not an earnings or operational report).</p><h3>Key Details:</h3><h3>Reporting Person:</h3><p>Wouter T. van Kempen, newly appointed as a</p><h3>Director</h3><p>of SM Energy, effective 1/30/2026.</p><h3>Holdings:</h3><p>210,602 shares of SM Energy common stock ($.01 par value), held directly. No derivative securities reported.</p><h3>Market-Moving Context — SM Energy / Civitas Merger:</h3><p>The filing reveals that</p><h3>SM Energy completed its acquisition of Civitas Resources (CIVI)</h3><p>via an all-stock merger. Key terms: each Civitas share converted into</p><h3>1.45 SM Energy shares</h3><p>. Civitas RSU/DSU awards were similarly converted at the 1.45x ratio. Van Kempen, a former Civitas director/executive, received his shares through this conversion. His converted RSUs and DSUs fully vested upon closing due to his termination of employment at Civitas, with DSUs settling upon board separation and RSUs settling within 60 days.</p><h3>Significance:</h3><p>This confirms the</p><h3>Civitas merger has officially closed</h3><p>(1/30/2026), substantially expanding SM Energy's asset base and scale. Investors should monitor for updated production guidance, combined-entity financials, and integration-related disclosures. No new risk factors or guidance changes are disclosed in this filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 3 — 2026-02-02</h2>
             <p>## SEC Form 3 Summary — SM Energy Co (SM) | Filed 2026-02-02</p><h3>Filing Type:</h3><p>Form 3 — Initial Statement of Beneficial Ownership (insider disclosure, not a financial/operational filing).</p><h3>Key Details:</h3><h3>Reporting Person:</h3><p>Morris R. Clark, newly appointed</p><h3>Director</h3><p>of SM Energy Co, effective 01/30/2026.</p><h3>Holdings Disclosed:</h3><p>62,812 shares of SM Energy common stock ($.01 par value), held directly. No derivative securities reported.</p><h3>Critical Context — Civitas Merger Completed:</h3><p>The filing reveals that SM Energy's merger with</p><h3>Civitas Resources, Inc.</h3><p>has closed. Under the merger agreement, each Civitas common share converted into</p><h3>1.45 shares of SM Energy stock</h3><p>, and outstanding Civitas deferred stock units (DSUs) fully vested and converted at the same 1.45x ratio. Clark's 62,812 shares include vested DSUs settling upon board separation, indicating he was a former Civitas director now joining SM Energy's board.</p><h3>Market-Moving Takeaway:</h3><p>This filing confirms</p><h3>completion of the SM Energy–Civitas merger</h3><p>, a significant Permian/DJ Basin consolidation. Investors should monitor for updated combined production guidance, potential synergy targets, balance sheet impacts, and integration risks. The 1.45x exchange ratio and DSU acceleration terms are now finalized. No unusual risks or red flags noted in this disclosure.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — 3 — 2026-02-02</h2>
             <p>## SEC Form 3 Summary — SM Energy Co (SM) | Filed 2/2/2026</p><h3>Filing Type:</h3><p>Form 3 — Initial Statement of Beneficial Ownership (insider disclosure, not a financial/operational filing)</p><h3>Key Details:</h3><h3>Lloyd W. Helms Jr.</h3><p>has been reported as a new</p><h3>Director</h3><p>of SM Energy Company, effective</p><h3>January 30, 2026</h3><p>. He beneficially owns</p><h3>17,540 shares</h3><p>of SM Energy common stock (direct ownership, $0.01 par value).</p><h3>Context — Civitas Merger:</h3><p>Helms' ownership stems from the completed</p><h3>merger between SM Energy and Civitas Resources, Inc.</h3><p>Under the merger agreement, each Civitas common share was converted into</p><h3>1.45 SM Energy shares</h3><p>, and outstanding Civitas deferred stock units (DSUs) fully vested and converted into SM Energy DSUs at the same 1.45x ratio. Helms' 17,540 shares include vested DSUs settling upon board separation.</p><h3>Market-Moving Implications:</h3><p>This filing confirms the</p><h3>Civitas-SM Energy merger has closed</h3><p>, with former Civitas board members (Helms) now joining SM Energy's board. This is a significant consolidation in the E&P space. No derivative securities were reported. No production guidance, financials, or risk disclosures are included — this is strictly an insider ownership disclosure.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="SM">
             <h2>SM — SCHEDULE 13G/A — 2026-02-06</h2>
             <p># Summary: BlackRock Schedule 13G/A Filing for SM Energy Company (Filed 02/06/2026)</p><h3>Filing Type:</h3><p>This is a passive ownership disclosure (Amendment No. 21) by</p><h3>BlackRock, Inc.</h3><p>, not an operational filing by SM Energy. It contains no financial results, production updates, or guidance.</p><h3>Key Ownership Details:</h3><p>- BlackRock beneficially owns</p><h3>22,635,921 shares</h3><p>of SM Energy common stock, representing</p><h3>9.5%</h3><p>of the outstanding class.
 -</p><h3>Sole voting power:</h3><p>22,316,204 shares;</p><h3>sole dispositive power:</h3><p>22,635,921 shares. No shared voting or dispositive power.
 - Event date: January 31, 2026.</p><h3>Intent:</h3><p>BlackRock certifies shares were acquired in the</p><h3>ordinary course of business</h3><p>— not to influence or change control of SM Energy. This is a standard institutional holding disclosure under Rule 13d-1(b).</p><h3>Market Relevance:</h3><p>The ~9.5% stake confirms BlackRock remains a significant institutional holder. No individual underlying client holds more than 5%. The filing itself is routine and unlikely to be market-moving, though the size of the position underscores strong institutional interest in SM Energy. Investors should monitor for any shifts toward an activist 13D filing, which would signal a change in intent.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Summary — Devon Energy (DVN), Filed 02/12/2026</p><h3>Reporting Person:</h3><p>Clay M. Gaspar, President and CEO (also a Director)</p><h3>Filing Type:</h3><p>This is a</p><h3>Form 4 insider transaction filing</h3><p>, not an operational or financial earnings report. It contains no production updates, guidance changes, or risk disclosures.
 
@@ -980,21 +1009,21 @@ The filing signals the</p><h3>Civitas merger is now closed</h3><p>, a transforma
 This is a</p><h3>routine executive compensation event</h3><p>— restricted stock grant with share withholding for taxes — not a discretionary buy or sell. The vesting schedule signals long-term alignment with shareholders.</p><h3>No material market-moving information</h3><p>is contained in this filing. DVN's stock price at transaction was</p><h3>$43.48</h3><p>.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p>## Devon Energy (DVN) — SEC Form 4 Summary (Filed 02/12/2026)</p><h3>Filing Type:</h3><p>Insider transaction (Form 4) —</p><h3>not</h3><p>a 10-Q/10-K operational filing. This reports changes in beneficial ownership for</p><h3>Thomas Jeffrey Hellman</h3><p>, SVP of E&P Operations.</p><h3>Key Transactions (02/10/2026):</h3><p>-</p><h3>Disposed of 1,920 shares</h3><p>of common stock at</p><h3>$43.48/share</h3><p>via transaction code "F" (tax withholding on vesting equity), totaling ~$83,500.
 -</p><h3>Acquired 16,560 restricted shares</h3><p>at</p><h3>$0 cost</h3><p>(equity compensation grant). These vest in</p><h3>25% annual installments</h3><p>over four years (Feb 2027–2030).
 -</p><h3>Post-transaction holdings:</h3><p>32,154 shares held directly.</p><h3>Market Relevance:</h3><p>This is a routine insider compensation event — a restricted stock award to a senior operational executive — not a discretionary open-market purchase or sale. The "F" disposition reflects mandatory tax withholding, not a bearish signal. The four-year vesting schedule suggests management alignment with longer-term shareholder value.</p><h3>No operational updates, production figures, guidance changes, or risk disclosures</h3><p>are included in this filing. Investors should reference Devon's most recent 10-K or earnings release for fundamental and operational data.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Summary — Devon Energy (DVN), Filed 02/12/2026</p><h3>Filing Type:</h3><p>Form 4 — Insider transaction (Statement of Changes in Beneficial Ownership)</p><h3>Reporting Person:</h3><p>Robert Ferrall Lowe III, SVP & Chief Technology Officer</p><h3>Key Transactions (all dated 02/10/2026):</h3><p>-</p><h3>Shares disposed (tax withholding):</h3><p>3,782 shares total sold across five transactions at</p><h3>$43.48/share</h3><p>(code "F" — tax withholding on vesting equity), generating ~$164,400 in implied proceeds.
 -</p><h3>Restricted stock granted:</h3><p>9,200 shares vesting in 25% annual installments (Feb 2027–2030) and 17,250 shares vesting 100% on Feb 10, 2029, both awarded at $0 cost.
 -</p><h3>Post-transaction beneficial ownership:</h3><p>49,433 shares held directly.</p><h3>Market Relevance:</h3><p>This is a routine insider compensation filing — not an open-market buy or sell — and is unlikely to be market-moving. The dispositions were mandatory tax-withholding transactions tied to vesting equity, not discretionary sales. The new equity grants (~26,450 shares) reflect standard executive compensation and signal continued alignment of management incentives with shareholder value.</p><h3>No production updates, guidance changes, financial results, or risk disclosures</h3><p>are included in this filing. Investors should look to Devon's 10-K or earnings releases for operational details.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Filing Summary — Devon Energy (DVN)</p><h3>Filing Date:</h3><p>February 12, 2026</p><h3>Insider:</h3><p>John David Raines, SVP of E&P Asset Management
 
@@ -1011,7 +1040,7 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not an earnings or
 ## Market Implications</p><h3>This filing is not market-moving.</h3><p>There are no production updates, guidance changes, financial results, or risk disclosures — Form 4s strictly report insider ownership changes. The dispositions were mandatory tax-related sales, not discretionary selling, which signals no bearish intent. The four-year vesting schedule on the new grant suggests management alignment with long-term shareholder value. DVN traded around $43.48 at the time of these transactions.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="DVN">
             <h2>DVN — 4 — 2026-02-12</h2>
             <p># SEC Form 4 Summary — Devon Energy (DVN), Filed 02/12/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4) — not a quarterly earnings or operational filing.</p><h3>Reporting Person:</h3><p>Jeffrey L. Ritenour, EVP & Chief Financial Officer</p><h3>Key Transactions (02/10/2026):</h3><p>-</p><h3>Shares Disposed (Tax Withholding):</h3><p>Five separate "F" transactions (mandatory tax withholding on vesting equity) totaling</p><h3>23,373 shares</h3><p>disposed at</p><h3>$43.48/share</h3><p>, representing approximately</p><h3>$1.02 million</h3><p>in value.
 
@@ -1020,14 +1049,14 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not an earnings or
 -</p><h3>Post-Transaction Beneficial Ownership:</h3><p>498,481 shares held directly.</p><h3>Market Implications:</h3><p>This filing is</p><h3>routine insider compensation activity</h3><p>— not a discretionary buy or sell signal. The dispositions reflect standard tax withholding upon vesting, and the new grant reflects the company's annual executive compensation cycle. There are no production updates, guidance changes, or risk disclosures in this filing.</p><h3>Notable:</h3><p>The $43.48 share price at transaction time provides a market reference point. The four-year vesting schedule signals the company's focus on long-term executive retention. No 10b5-1 plan was indicated.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-26</h2>
             <p>## SEC Form 4 Summary — Coterra Energy (CTRA) | Filed 02/26/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4), not an earnings or operational filing.</p><h3>Reporting Person:</h3><p>Andrea Alexander, SVP & Chief HR Officer</p><h3>Transaction Date:</h3><p>February 24, 2026</p><h3>Key Details:</h3><p>-</p><h3>Restricted Stock Units (RSUs):</h3><p>Acquired 32,787 RSUs at $0 cost, vesting on January 31, 2029. These are payable solely in CTRA common stock.
 -</p><h3>Performance Stock Units (PSUs):</h3><p>Simultaneously awarded 32,787 PSUs with a three-year performance period (Feb 2026–Jan 2029). Payout ranges from 0% to 200% of target — shares up to 100%, cash above 100% — based on undisclosed performance criteria.
 -</p><h3>Post-Transaction Holdings:</h3><p>175,054 shares of common stock held directly, plus 32,787 PSUs.</p><h3>Market Implications:</h3><p>This is a routine executive compensation grant, not a discretionary open-market purchase or sale. It signals standard long-term incentive alignment rather than insider conviction on near-term price direction. The three-year vesting/performance horizon reflects management's focus on sustained performance.</p><h3>No production updates, guidance changes, financial results, or material risk disclosures are included</h3><p>— this filing is strictly an insider ownership disclosure required under Section 16(a).</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-26</h2>
             <p>## SEC Form 4 Filing Summary — Coterra Energy Inc. (CTRA)</p><h3>Filing Date:</h3><p>February 26, 2026</p><h3>Reporting Person:</h3><p>Gregory F. Conaway, Vice President & Chief Accounting Officer</p><h3>Transaction Details:</h3><p>This is an insider compensation filing, not an earnings or operational report. On February 24, 2026, Conaway received</p><h3>26,230 restricted stock units (RSUs)</h3><p>at no cost ($0), representing a routine equity compensation grant. The RSUs are payable solely in CTRA common stock and vest on</p><h3>January 31, 2029</h3><p>(~3-year vesting period). Following the transaction, Conaway directly owns 26,230 shares of common stock.</p><h3>Market Implications:</h3><p>This filing is</p><h3>not market-moving</h3><p>. It reflects a standard long-term incentive award to a senior officer, signaling normal executive retention practices. The 3-year cliff vesting schedule aligns management interests with longer-term shareholder value.</p><h3>Key Takeaways:</h3><p>- No production updates, guidance changes, or financial results are disclosed in this filing.
 - No derivative securities (options, puts, calls) were reported.
@@ -1036,7 +1065,7 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not an earnings or
 Investors should look to CTRA's 10-K or earnings releases for substantive financial, operational, and guidance information.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-26</h2>
             <p># SEC Form 4 Summary — Coterra Energy (CTRA)</p><h3>Filing Date:</h3><p>February 26, 2026 |</p><h3>Insider:</h3><p>Michael D. DeShazer, EVP – Operations
 
@@ -1052,14 +1081,14 @@ Following the transactions, DeShazer beneficially owns</p><h3>184,988 shares</h3
 ## Market Implications</p><h3>This filing is not market-moving.</h3><p>It reflects standard long-term incentive compensation for a senior executive, consistent with typical annual equity grant cycles. There are</p><h3>no production updates, guidance changes, financial results, or new risk disclosures</h3><p>in this filing. The PSU structure signals the board's continued emphasis on performance-linked executive pay over a multi-year horizon.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-26</h2>
             <p>## SEC Form 4 Summary — Coterra Energy (CTRA) | Filed 02/26/2026</p><h3>Filing Type:</h3><p>Insider transaction (Form 4) —</p><h3>not</h3><p>a quarterly/annual earnings filing (10-Q/10-K). This is a statement of changes in beneficial ownership for</p><h3>Thomas E. Jorden, CEO and President</h3><p>.</p><h3>Key Transaction Details (02/24/2026):</h3><p>-</p><h3>Restricted Stock Units (RSUs):</h3><p>Jorden was awarded</p><h3>180,328 RSUs</h3><p>at $0 cost, vesting on January 31, 2029, payable in common stock.
 -</p><h3>Performance Stock Units (PSUs):</h3><p>Jorden also received</p><h3>180,328 PSUs</h3><p>with a three-year performance period (Feb 2026–Jan 2029). These vest at</p><h3>0%–200%</h3><p>of target — shares paid in stock up to 100%, with any above-target vesting paid in</p><h3>cash</h3><p>at fair market value.
 -</p><h3>Total Beneficial Ownership Post-Transaction:</h3><p>563,165 shares (direct) plus 2,757,960 shares held indirectly via trust.</p><h3>Market Implications:</h3><p>This is a routine executive compensation grant, not an open-market purchase or sale. It signals no change in operational guidance, financials, or production outlook. The long vesting period and performance-linked PSUs align management incentives with multi-year shareholder returns.</p><h3>No material market-moving information</h3><p>is contained in this filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="CTRA">
             <h2>CTRA — 4 — 2026-02-26</h2>
             <p># SEC Form 4 Summary — Coterra Energy (CTRA)</p><h3>Filing Date:</h3><p>February 26, 2026 |</p><h3>Insider:</h3><p>Blake A. Sirgo, EVP – Business Units
 
@@ -1073,14 +1102,14 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not an earnings or
 This filing is</p><h3>not market-moving</h3><p>. It reflects standard long-term incentive compensation aligned with shareholder interests. The 3-year vesting/performance horizon and up-to-200% PSU payout structure signal management confidence and alignment with long-term performance targets. No sales or dispositions were reported.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p>## SEC Form 4 Summary — Matador Resources (MTDR) | Filed 02/18/2026</p><h3>Reporting Person:</h3><p>Bryan A. Erman, Co-President, CLO & Head of M&A</p><h3>Key Transactions (02/14–02/17/2026):</h3><p>-</p><h3>Restricted Stock Vesting:</h3><p>2,667 shares vested (granted 02/16/2023); 1,050 shares were withheld for tax withholding at $47.80/share. No open-market sale occurred.
 -</p><h3>Phantom Unit Cash Settlement:</h3><p>6,000 phantom units (from a 2025 grant) and 5,000 phantom units (from a 2024 grant) partially vested and were settled entirely in</p><h3>cash</h3><p>at $47.80/unit — no shares issued or sold. 12,000 and 5,000 units remain outstanding from those respective grants.
 -</p><h3>New Phantom Unit Grant:</h3><p>35,000 phantom units granted on 02/17/2026, vesting ratably over three years — a notable increase in equity-linked compensation, signaling the board's retention commitment to a key executive.</p><h3>Post-Transaction Beneficial Ownership:</h3><p>~85,216 shares (direct + indirect via 401(k) and IRA) plus 52,000 phantom units.</p><h3>Market Implications:</h3><p>This is a routine insider compensation filing with</p><h3>no open-market buying or selling</h3><p>. The sizable new 35,000-unit phantom grant underscores management alignment with shareholders. No production, guidance, or risk disclosures are included — this is not a 10-K/10-Q.</p><h3>Not market-moving.</h3>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p># SEC Form 4 Summary – Matador Resources (MTDR)</p><h3>Filing Date:</h3><p>February 18, 2026</p><h3>Insider:</h3><p>Robert T. Macalik, EVP & Chief Financial Officer
 
@@ -1097,21 +1126,21 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not an earnings re
 ## Market Impact</p><h3>Minimal.</h3><p>This filing reflects standard executive compensation mechanics — tax withholding and equity vesting — with</p><h3>no open-market buying or selling</h3><p>, no operational updates, and no guidance changes. The new phantom unit grant signals continued alignment of executive compensation with shareholder interests.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p>## SEC Form 4 Summary — Matador Resources (MTDR) | Filed 2/18/2026</p><h3>Filer:</h3><p>Christopher P. Calvert, EVP and COO</p><h3>Key Transactions (Feb 14–17, 2026):</h3><p>-</p><h3>Shares disposed via tax withholding:</h3><p>1,312 shares (2/14) and 1,050 shares (2/16) at $47.80/share, related to vesting of restricted stock grants from 2024 and 2023, respectively. No open-market sales occurred.
 -</p><h3>Phantom unit settlement:</h3><p>6,000 phantom units vested and were settled in</p><h3>cash</h3><p>at $47.80/unit (based on 2/13/2026 closing price). No shares issued.
 -</p><h3>New phantom unit grant:</h3><p>27,000 phantom units awarded, vesting in equal annual installments over three years, each economically equivalent to one MTDR common share.</p><h3>Post-Transaction Beneficial Ownership:</h3><p>85,312 shares (direct) + 40,000 shares (indirect via 401(k)) + 39,000 phantom units — signaling continued significant insider alignment.</p><h3>Market Implications:</h3><p>This is a</p><h3>routine insider compensation filing</h3><p>, not indicative of directional conviction or operational changes. No production updates, guidance revisions, or risk disclosures are included. The sizable new phantom unit grant (27,000 units) suggests the board continues incentivizing senior leadership with equity-linked compensation, reinforcing long-term alignment with shareholders. No material market-moving information.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p># SEC Form 4 Summary — Matador Resources (MTDR) | Filed 02/18/2026</p><h3>Filer:</h3><p>William Thomas Elsener, EVP of Reservoir Engineering</p><h3>This is an insider transaction filing (Form 4), not an earnings or operational report.</h3><p>It contains no production updates, guidance changes, or key financials about Matador's business. Key details:</p><h3>Transactions (around 02/14–02/17/2026):</h3><p>-</p><h3>1,050 shares withheld</h3><p>(code F) at $47.80/share to cover tax obligations on the vesting of 2,667 restricted stock shares originally granted 02/16/2023.
 -</p><h3>11,000 phantom units settled for cash</h3><p>at $47.80/unit (5,000 from a 2024 grant and 6,000 from a 2025 grant), with no shares issued — purely cash settlement.
 -</p><h3>27,000 new phantom units granted</h3><p>(code A), vesting in equal annual installments over three years.</p><h3>Post-Transaction Holdings:</h3><p>113,730 shares of common stock (direct); 27,000 phantom units outstanding plus 12,000 unvested phantom units from prior grants.</p><h3>Market Implications:</h3><p>This filing reflects routine executive compensation activity (vesting, tax withholding, new equity awards) rather than discretionary buying or selling. The transactions are largely non-discretionary and unlikely to be market-moving. No signals of insider sentiment shift.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="MTDR">
             <h2>MTDR — 4 — 2026-02-18</h2>
             <p>## SEC Form 4 Filing Summary — Matador Resources (MTDR)</p><h3>Filing Date:</h3><p>February 18, 2026</p><h3>Insider:</h3><p>George G. Krug, EVP – Marketing and Midstream
 
@@ -1131,19 +1160,19 @@ This is a</p><h3>routine insider compensation filing</h3><p>, not a 10-Q/10-K. K
 No risk factors or operational disclosures are present in this filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 4 — 2025-12-02</h2>
             <p>## SEC Form 4 Summary — Diamondback Energy (FANG)</p><h3>Filing Date:</h3><p>December 2, 2025 |</p><h3>Transaction Date:</h3><p>November 28, 2025</p><h3>Key Transaction:</h3><p>SGF FANG Holdings, LP — a 10% owner and entity controlled by director Lyndal Greth — sold</p><h3>2,000,000 shares</h3><p>of FANG common stock directly back to the company at</p><h3>$152.59 per share</h3><p>, representing approximately</p><h3>$305.2 million</h3><p>in total proceeds. The sale was executed via a letter agreement with Diamondback, indicating this was a</p><h3>negotiated share repurchase</h3><p>rather than an open-market transaction.</p><h3>Post-Transaction Holdings:</h3><p>SGF FANG Holdings retains approximately</p><h3>99.69 million shares</h3><p>, confirming it remains a substantial 10% owner despite the disposition.</p><h3>Market Implications:</h3><p>This is a significant</p><h3>company-initiated buyback</h3><p>from a major insider, which is generally shareholder-friendly — reducing share count and signaling management confidence in valuation. However, the large block sale by a 10% owner could also reflect portfolio rebalancing or liquidity needs on the seller's side.</p><h3>No derivative securities</h3><p>were reported in the filing. No production, operational guidance, or risk disclosures are included — this is strictly an insider ownership change filing, not an operational report.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 4 — 2025-12-08</h2>
             <p># SEC Form 4 Summary: Diamondback Energy (FANG) — Filed 12/08/2025</p><h3>Reporting Person:</h3><p>Charles Alvin Meloy, Director</p><h3>Key Transactions (12/04/2025):</h3><p>-</p><h3>Gift (Code G):</h3><p>Meloy transferred 124,835 shares of FANG common stock (valued at $0) via a transfer of limited partnership interests in CS Ventures Ltd. (sole member of Wolfrock Energy LLC) to trusts for his children. No actual shares were disposed of — this was an estate/tax planning transfer.
 
 -</p><h3>Disposition (Code S):</h3><p>A reported sale of 377,911 shares at $138.61/share, totaling approximately</p><h3>$52.4 million</h3><p>. However, per the footnotes, this also represents a transfer of LP interests to children's trusts, with no actual shares sold on the open market.</p><h3>Post-Transaction Holdings:</h3><p>1,044,864 shares held indirectly through Wolfrock Energy LLC; 2,275 shares held directly.</p><h3>Market Impact Assessment:</h3><p>Despite the large nominal transaction values, these appear to be</p><h3>internal estate planning/wealth transfer transactions</h3><p>, not open-market sales. No derivative securities were involved. This filing is</p><h3>unlikely to be market-moving</h3><p>, as no shares were actually sold into the market. No operational, financial, or guidance updates are contained in this insider filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 144 — 2025-12-08</h2>
             <p>## FANG (Diamondback Energy) — SEC Form 144 Filing Summary (Filed 12/08/2025)</p><h3>Filing Type:</h3><p>Form 144 — Notice of Proposed Sale of Securities (insider sale notification, not a financial/operational filing).</p><h3>Key Details:</h3><p>-</p><h3>Insider:</h3><p>Charles A. Meloy, Director of Diamondback Energy, Inc.
 -</p><h3>Proposed Sale:</h3><p>62,858 shares of common stock, with an aggregate market value of ~$9.9 million, targeted for sale on or around 12/08/2025 via NASDAQ.
@@ -1154,49 +1183,56 @@ No risk factors or operational disclosures are present in this filing.</p>
 -</p><h3>Shares Outstanding:</h3><p>~286.5 million.</p><h3>Market Implications:</h3><p>This is a routine, pre-planned insider disposition representing a modest ~0.02% of shares outstanding. The 10b5-1 plan structure suggests no immediate material non-public information concern.</p><h3>No production, guidance, or financial updates are contained in this filing.</h3><p>Investors should monitor for clustering of insider sales but this alone is not materially market-moving.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 4 — 2025-12-10</h2>
             <p>## SEC Form 4 Summary — Diamondback Energy (FANG)</p><h3>Filing Date:</h3><p>December 10, 2025 |</p><h3>Insider:</h3><p>Charles Alvin Meloy, Director</p><h3>Transaction Details:</h3><p>Director Charles Meloy sold</p><h3>53 shares</h3><p>of FANG common stock on December 8, 2025, at a weighted average price of</p><h3>$160.13</h3><p>per share (range: $160.07–$160.19), totaling approximately</p><h3>$8,487</h3><p>. The sale was executed under a</p><h3>pre-arranged Rule 10b5-1 trading plan</h3><p>adopted on August 13, 2025, indicating this was a planned disposition rather than a reactive trade.</p><h3>Post-Transaction Holdings:</h3><p>Meloy retains significant beneficial ownership:</p><h3>1,044,811 shares</h3><p>held indirectly through Wolfrock Energy, LLC (a multi-layered entity he controls) plus</p><h3>2,275 shares</h3><p>held directly — totaling roughly</p><h3>1,047,086 shares</h3><p>(~$168 million at current prices).</p><h3>Market Implications:</h3><p>This is a</p><h3>de minimis sale</h3><p>— representing less than 0.01% of Meloy's holdings — and is unlikely to be market-moving. The pre-planned nature of the trade and the negligible volume relative to his total position suggest no directional signal regarding FANG's outlook. No production updates, guidance changes, or risk disclosures are included, as Form 4 filings are strictly insider transaction disclosures.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="FANG">
             <h2>FANG — 8-K — 2026-01-12</h2>
             <p>## Diamondback Energy (FANG) — 8-K Summary (Filed 01/12/2026)</p><h3>Q4 2025 Preliminary Pricing & Derivative Results</h3><h3>Realized Prices:</h3><p>Unhedged oil averaged $58.00/bbl, natural gas $0.03/Mcf (essentially flat), and NGLs $13.51/bbl. Hedged oil came in at $57.07/bbl (hedges trimmed ~$0.93/bbl), while hedged gas improved to $1.03/Mcf—indicating significant derivative gains on gas. NGL hedging had no impact.</p><h3>Derivative Activity:</h3><p>Net derivative gain of $192 million, comprising $73 million in cash settlements (commodity: +$78M, interest rate swaps: -$5M) and $119 million in non-cash mark-to-market gains. A $7M gain on the 2026 WTI contingent liability (related to the Endeavor merger) was also recorded. The sizable derivative gains partially offset soft commodity realizations—particularly the near-zero unhedged gas price.</p><h3>Shares Outstanding:</h3><p>~285.8 million basic and diluted (no dilutive impact), reflecting the post-Endeavor share base.</p><h3>Key Risks/Considerations:</h3><p>Extremely weak natural gas realizations ($0.03/Mcf unhedged) signal ongoing Permian basis pressure and potential negative gas economics. The filing references multiple recent strategic transactions (Endeavor merger, Double Eagle acquisition, Sitio/Viper deals), adding integration risk.</p><h3>Market-Moving Takeaway:</h3><p>Near-zero natural gas realizations are a notable headwind, though robust hedging and derivative gains provide a meaningful offset.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — 4 — 2026-01-07</h2>
             <p>## SEC Form 4 Summary — Permian Resources Corp (PR) | Filed 01/07/2026</p><h3>Reporting Person:</h3><p>John Charles Bell, EVP & General Counsel</p><h3>Key Transactions:</h3><p>-</p><h3>Tax-related share sales (non-discretionary):</h3><p>Bell sold 70,249 shares on 01/05/2026 at a weighted average of $13.76 (range: $13.49–$14.38) and 106,399 shares on 01/06/2026 at a weighted average of $13.63 (range: $13.48–$13.88). These were mandatory "sell-to-cover" transactions to satisfy tax withholding on vesting performance-based RSUs — not discretionary selling.
 
 -</p><h3>Corporate Reorganization & OpCo Unit Exchange (01/07/2026):</h3><p>Permian Resources completed a corporate restructuring where PRC NewCo Inc. became the new parent entity via merger. Bell exchanged 1,353,243 OpCo Units for an equal number of newly issued Class A shares, with corresponding Class C shares cancelled. This was a structural reorganization with no change in economic ownership.</p><h3>Post-Transaction Holdings:</h3><p>1,729,685 shares of Class A Common Stock (direct).</p><h3>Market Implications:</h3><p>The reorganization is a governance/structural change, not operationally significant. The insider sales were solely tax-driven, signaling no bearish sentiment. No guidance changes, production updates, or new risk disclosures are embedded in this filing.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — 4 — 2026-01-07</h2>
             <p>## SEC Form 4 Summary — Permian Resources Corp (PR) | Filed 01/07/2026</p><h3>Reporting Person:</h3><p>William M. Hickey III, Co-Chief Executive Officer & Director</p><h3>Key Transactions:</h3><p>-</p><h3>Sell-to-Cover Dispositions:</h3><p>Hickey sold 309,980 shares on 01/05/2026 at a weighted average of $13.74 (range: $13.49–$14.39) and 467,725 shares on 01/06/2026 at a weighted average of $13.63 (range: $13.48–$13.89). These were</p><h3>mandatory sales to cover tax withholding</h3><p>on vesting performance stock units — not discretionary trades.
 
 -</p><h3>Corporate Reorganization (01/07/2026):</h3><p>PR completed a corporate restructuring where PRC NewCo Inc. became the new parent entity via merger with the predecessor Permian Resources Corporation. Hickey exchanged all OpCo Units (common units in Permian Resources Operating, LLC) for newly issued Class A shares on a 1:1 basis — acquiring 9,277,692 shares directly and 2,989,989 shares indirectly through Hickey Family Investments, L.P.</p><h3>Post-Transaction Holdings:</h3><p>~13.28 million shares (10.29M direct + 2.99M indirect).</p><h3>Market Implications:</h3><p>The reorganization is structural/tax-related, not operationally driven. The sell-to-cover transactions (~$10.7M) are routine. No changes to guidance, production, or risk profile are indicated. The restructuring simplifies PR's corporate structure by eliminating the Up-C partnership framework.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — 4 — 2026-01-07</h2>
             <p>## SEC Form 4 Summary — Permian Resources Corp (PR) | Filed 01/07/2026</p><h3>Reporting Person:</h3><p>James H. Walter, Co-Chief Executive Officer & Director</p><h3>Key Transactions:</h3><p>-</p><h3>Tax-related sales (Jan 5-6):</h3><p>Walter sold 777,703 shares of Class A Common Stock via mandatory "sell to cover" transactions to satisfy tax withholding on vesting performance stock units — 310,003 shares at a weighted average of $13.74 (range: $13.49–$14.39) and 467,700 shares at $13.63 (range: $13.48–$13.88). These were</p><h3>non-discretionary</h3><p>sales.
 
 -</p><h3>Corporate Reorganization (Jan 7):</h3><p>Permian Resources completed a corporate restructuring in which PRC NewCo Inc. became the new parent entity via merger with the predecessor company. Walter exchanged all of his OpCo Units (common units in Permian Resources Operating, LLC) for newly issued Class A shares on a 1-for-1 basis — 9,052,692 shares directly and 2,989,989 shares indirectly through Bedford Family Partners, L.P. Class C shares were cancelled.</p><h3>Post-Transaction Ownership:</h3><p>~13,052,819 total shares (10,062,830 direct; 2,989,989 indirect).</p><h3>Market Implications:</h3><p>The reorganization is structural/tax-related, not operationally significant. No guidance changes, production updates, or new risk factors disclosed. The insider sales were mechanical, not indicative of bearish sentiment.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="PR">
             <h2>PR — 4 — 2026-01-07</h2>
             <p>## SEC Form 4 Summary — Permian Resources Corp (PR) | Filed 01/07/2026</p><h3>Reporting Person:</h3><p>Robert Regan Shannon, EVP & Chief Accounting Officer</p><h3>Key Transactions:</h3><h3>Sales (Tax-Related, Non-Discretionary):</h3><p>-</p><h3>01/05/2026:</h3><p>Sold 70,254 shares at weighted avg. $13.76 (range $13.50–$14.39) — mandatory "sell to cover" for tax withholding on vesting performance restricted stock.
 -</p><h3>01/06/2026:</h3><p>Sold 106,405 shares at weighted avg. $13.63 (range $13.48–$13.88) — same tax-related purpose.</p><h3>Corporate Reorganization (01/07/2026):</h3><p>Permian Resources completed a corporate restructuring where PRC NewCo Inc. became the successor parent entity via merger. All economic interests were preserved identically. Shannon exchanged 2,000,000 OpCo Units (held directly and through two investment partnerships) for 2,000,000 newly issued Class A shares on a 1-for-1 basis. Class C shares were cancelled for no consideration.</p><h3>Post-Transaction Holdings:</h3><p>1,360,667 shares (direct) + 500,000 shares each in two investment partnerships = ~2,360,667 total beneficial shares.</p><h3>Market Implications:</h3><p>The sales were routine tax-driven dispositions, not discretionary. The reorganization is structural/administrative with no change in economic ownership. No production, guidance, or risk updates are disclosed — this is purely an insider ownership filing. Minimal market-moving signal.</p>
         </div>
         
-        <div class="card">
+        <div class="card" data-ticker="">
             <h2>---</h2>
             <p>## SEC Form 4 Summary — Permian Resources Corp (PR)</p><h3>Filing Date:</h3><p>January 7, 2026</p><h3>Insider:</h3><p>Guy M. Oliphint, EVP & Chief Financial Officer</p><h3>Transaction Details:</h3><p>The CFO sold a total of</p><h3>301,741 shares</h3><p>of Class A Common Stock over two days:
 -</p><h3>Jan 5, 2026:</h3><p>128,837 shares at a weighted avg. price of</p><h3>$13.76</h3><p>(range: $13.50–$14.38)
 -</p><h3>Jan 6, 2026:</h3><p>172,904 shares at a weighted avg. price of</p><h3>$13.63</h3><p>(range: $13.47–$13.88)</p><h3>Key Context:</h3><p>These were</p><h3>not discretionary sales</h3><p>. The transactions were mandatory "sell-to-cover" dispositions to satisfy tax withholding obligations triggered by the vesting of</p><h3>performance stock units (PSUs) and a restricted stock award</h3><p>. This signals routine equity compensation activity rather than a bearish insider signal.</p><h3>Post-Transaction Holdings:</h3><p>Oliphint retains</p><h3>616,683 shares</h3><p>directly, reflecting continued meaningful alignment with shareholders.</p><h3>Market Implications:</h3><p>Generally</p><h3>non-material</h3><p>for investors. The sell-to-cover nature reduces concerns about insider sentiment. However, the vesting of PSUs confirms performance milestones were met, which is a modestly positive operational signal. No guidance changes, production updates, or risk disclosures are contained in this filing.</p>
         </div>
         
+    <script>
+        function filterCards(ticker) {
+            document.querySelectorAll('.card').forEach(function(card) {
+                card.style.display = (ticker === 'ALL' || card.dataset.ticker === ticker) ? '' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>

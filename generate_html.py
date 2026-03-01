@@ -15,6 +15,7 @@ def generate_html():
             summaries = f.read()
 
     html_entries = []
+    seen_tickers = []
     entries = summaries.strip().split("\n---\n")
     for entry in entries:
         if not entry.strip():
@@ -34,14 +35,21 @@ def generate_html():
                 formatted += f'<p>{chunk}</p>'
             i += 1
 
+        ticker_match = re.match(r'^([A-Z]+)\s+—', title)
+        ticker = ticker_match.group(1) if ticker_match else None
+        if ticker and ticker not in seen_tickers:
+            seen_tickers.append(ticker)
         html_entries.append(f"""
-        <div class="card">
+        <div class="card" data-ticker="{ticker or ''}">
             <h2>{title}</h2>
             {formatted}
         </div>
         """)
 
     cards = "".join(reversed(html_entries))
+    ticker_options = "\n            ".join(
+        f'<option value="{t}">{t}</option>' for t in sorted(seen_tickers)
+    )
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -93,12 +101,43 @@ def generate_html():
             color: #888;
             margin-bottom: 20px;
         }}
+        .filter-bar {{
+            margin-bottom: 20px;
+        }}
+        .filter-bar label {{
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 8px;
+            color: #555;
+        }}
+        .filter-bar select {{
+            font-size: 0.9em;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+        }}
     </style>
 </head>
 <body>
     <h1>SEC Filing Summaries</h1>
     <p class="subtitle">Peer companies: PR | FANG | MTDR | CTRA | DVN | SM</p>
+    <div class="filter-bar">
+        <label for="company-filter">Filter by company:</label>
+        <select id="company-filter" onchange="filterCards(this.value)">
+            <option value="ALL">All</option>
+            {ticker_options}
+        </select>
+    </div>
     {cards}
+    <script>
+        function filterCards(ticker) {{
+            document.querySelectorAll('.card').forEach(function(card) {{
+                card.style.display = (ticker === 'ALL' || card.dataset.ticker === ticker) ? '' : 'none';
+            }});
+        }}
+    </script>
 </body>
 </html>"""
 
