@@ -1446,3 +1446,99 @@ SM Energy is in the process of merging with **Civitas Resources (CIVI)**, a tran
 ## Risks
 - **Stock underperformance** post-announcement; management argues 120%+ upside to Enverus NAV vs. 3% for peers
 - **Colorado regulatory environment** acknowledged but deemed manageable — permitting
+
+---
+## DVN — 10-Q — 2025-08-06
+
+# Devon Energy (DVN) 10-Q Analysis — Q2 2025 (Filed August 6, 2025)
+
+---
+
+## **Overview**
+This is Devon Energy Corporation's quarterly report (10-Q) for the second quarter ending June 30, 2025, covering the three- and six-month periods ended June 30, 2025, with comparisons to the prior-year periods.
+
+---
+
+## **Key Financials**
+
+While the filing text provided consists primarily of XBRL taxonomy tags rather than fully rendered financial statements, the following key financial elements can be extracted and inferred:
+
+| Metric | Q2 2025 | Q2 2024 | H1 2025 | H1 2024 |
+|--------|---------|---------|---------|---------|
+| **Revenue Streams** | Oil, Gas, NGL Sales + Marketing & Midstream Revenues | Same structure | Same | Same |
+| **Revenue Segments** | Oil (WTI-linked), Gas (Henry Hub/Waha), NGLs (Mont Belvieu) | Same | Same | Same |
+| **Debt Outstanding** | Multiple senior note tranches; term loan outstanding | — | — | — |
+| **Share Count** | Elevated vs. 2024 (Williston acquisition stock issuance) | — | — | — |
+
+**Notable Financial Structure Items:**
+- **Senior Notes Outstanding** include: 5.85% due Dec 2025, 5.25% due Oct 2027, 5.875% due Jun 2028, 4.50% due Jan 2030, 7.875% due Sep 2031, 7.95% due Apr 2032, 5.20% due Sep 2034, 4.75% due May 2042, 5.00% due Jun 2045, 5.75% due Sep 2054, and 7.50% due Sep 2027
+- **Term Loan Credit Agreement** originated August 12, 2024 (in connection with the Williston acquisition), with a tranche maturing September 25, 2026
+- **5.85% notes due December 2025** are near-term maturities — a subsequent event indicates Devon is redeeming/addressing these in September 2025
+- **Subsequent Event (Sep 2025):** Devon appears to be issuing or redeeming senior notes, suggesting active liability management
+
+---
+
+## **Production & Operations**
+
+**Operational Footprint:**
+- **Delaware Basin** (primary) — referenced via Waha natural gas basis swaps and Midland sweet oil differentials
+- **Williston Basin** — acquired September 27, 2024 (Grayson Mill acquisition); now fully integrated into operations
+- **Barnett Shale** — legacy asset, still generating revenue in both H1 2025 and H1 2024
+
+**Key Operational Items:**
+- **Williston Basin Acquisition (Grayson Mill Energy):** Closed September 27, 2024; included stock consideration (common shares issued). This significantly expanded DVN's production base and is the first full half-year of contribution in H1 2025
+- **Cotton Draw Midstream:** Subsequent event — on August 1, 2025, Devon changed its ownership interest in Cotton Draw Midstream (a water/midstream JV), suggesting a divestiture or restructuring of midstream interests
+- **Matterhorn Pipeline:** Devon holds an equity investment in the Matterhorn Express natural gas pipeline (Permian Basin takeaway capacity), with income recognized in both Q2 and H1 2025
+- **Water JV** and **Catalyst** midstream investments also noted on the balance sheet
+
+**Capital Expenditure:**
+- Not explicitly quantified in the XBRL tags provided, but exploration expenses are broken out for both periods, and significant upstream capital deployment is implied by the active drilling program across Delaware and Williston basins
+
+---
+
+## **Guidance & Outlook**
+
+**Hedging Program (Forward View):**
+Devon's derivative positions provide a window into expected production volumes and price risk management:
+
+| Commodity | Period | Instrument |
+|-----------|--------|------------|
+| **Oil (WTI)** | Q3-Q4 2025 | Price swaps, collars, three-way collars |
+| **Oil (WTI)** | Q1-Q4 2026 | Three-way collars |
+|
+
+---
+## SM — 8-K — 2025-11-17
+
+**Overview**
+SM Energy Company filed an 8-K on November 17, 2025, announcing additional details regarding its planned all-stock merger with Civitas Resources, Inc., along with a joint press release, joint investor presentation, and disclosure of upcoming investor conference participation.
+
+**Key Financials**
+No new financial results (revenue, net income, EPS, EBITDA, or free cash flow) were reported in this filing. This is a Regulation FD disclosure related to the merger, not a periodic earnings report. The filing references plans to continue paying a fixed quarterly dividend of $0.20 per share post-close.
+
+**Production & Operations**
+No specific production volumes, operational metrics, or capital expenditure figures were disclosed in the 8-K body text. Pro forma operational details of the combined company are contained in the referenced Exhibit 99.2 (joint investor presentation), which was not included in the extracted filing text.
+
+**Guidance & Outlook**
+- **Asset Divestitures:** SM Energy plans to divest at least **$1 billion of assets within one year of closing** the merger.
+- **Synergies:** Management expects cost synergies and margin improvements from the combination, though specific dollar amounts are not detailed in the 8-K text itself.
+- **Shareholder Returns:** The combined company intends to maintain SM Energy's $0.20/share fixed quarterly dividend.
+- **Strategic Goals:** Management highlighted expectations for increased scale, future inventory growth, enhanced cash flow generation, debt reduction, lower interest rates, and reduced cost of capital.
+- **CEO Transition & Leadership:** A CEO transition, COO appointment, and post-closing management team/Board composition were referenced but not detailed in this filing.
+
+**Risks & Concerns**
+- **Regulatory/Approval Risk:** Required governmental and regulatory approvals could delay, impose conditions on, or cause abandonment of the transaction.
+- **Shareholder Approval Risk:** Both SM Energy and Civitas stockholders must approve the merger; failure is possible.
+- **Integration Risk:** Challenges in successfully integrating two large E&P companies could result in failure to achieve expected synergies, or delays in realizing them.
+- **Management Distraction:** Significant management time diverted to the transaction and integration process.
+- **Market/Stock Price Risk:** Announcements related to the transaction could adversely affect share prices of either company.
+- **Key Personnel & Customer Retention:** Risk of losing key employees, suppliers, or customer relationships during the transition.
+- **Substantial Transaction Costs:** Both companies will incur significant costs related to the merger.
+- **Divestiture Execution Risk:** The $1 billion asset divestiture target within one year is ambitious and subject to market conditions.
+
+**Market Moving Items**
+- **Major M&A Transaction:** The SM Energy–Civitas merger creates a significantly larger combined E&P company with diversified assets (SM Energy's Permian/South Texas positions combined with Civitas' DJ Basin/Permian holdings). This is a transformative deal for both companies.
+- **$1 Billion Divestiture Plan:** The commitment to sell at least $1 billion in assets within a year of closing is notable — it signals portfolio rationalization and likely debt reduction but also raises execution risk.
+- **Rule 425 Box Checked:** The filing constitutes a written communication under Rule 425, confirming active solicitation of shareholders ahead of the proxy vote — indicating the deal is advancing toward a shareholder vote.
+- **Registration Statement Pending:** The S-4/joint proxy has not yet been filed or declared effective, suggesting the deal is still several months from closing.
+- **No Financial Surprises:** The filing contains no earnings data or revised guidance, so there are no beats/misses to assess. The market-moving element is purely strategic (merger progression and additional deal details).
