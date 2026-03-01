@@ -1182,3 +1182,85 @@ SM Energy held a special stockholder meeting on January 27, 2026, where sharehol
 - Integration execution risk, potential management distraction, failure to achieve anticipated synergies, and possible cost overruns were highlighted. Market disruption from the transaction remains a stated concern.
 
 **Bottom line:** The decisive shareholder approval removes a major closing hurdle, making deal completion highly likely near-term — a significant catalyst for both SM and CIVI shareholders.
+
+---
+## PR — S-8 POS — 2026-01-07
+
+## Permian Resources (PR) — S-8 POS Filing Summary (Jan. 7, 2026)
+
+**Filing Type:** Post-Effective Amendment to six Form S-8 Registration Statements — purely administrative/corporate housekeeping.
+
+**Key Event:** Permian Resources completed a **holding company reorganization** effective January 7, 2026, pursuant to a Master Reorganization Agreement dated December 22, 2025. A new parent entity ("New PR," formally PRC NewCo Inc.) replaced the old Permian Resources Corporation as the publicly traded company on the NYSE under the same ticker **"PR."** The former entity became a wholly owned subsidiary.
+
+**What Happened Mechanically:** New PR assumed all equity compensation plans (2023 LTIP, legacy Centennial 2016 LTIP, and 2019 ESPP). All outstanding restricted stock, RSU, PSU, and option awards were converted 1-for-1 into New PR shares. The filing **deregisters all unsold/unissued Old PR shares** across six prior S-8 registrations (dating from 2016–2023) and terminates their effectiveness.
+
+**Key Takeaways:**
+- **No financial, operational, production, or guidance information** is disclosed.
+- **No dilution event** — this is a structural reorganization, not a new equity issuance.
+- **Not market-moving** — standard corporate restructuring for tax, liability, or governance optimization. No change to ticker, exchange listing, or outstanding share count.
+
+**Signed by:** CFO Guy M. Oliphint.
+
+---
+## MTDR — 4 — 2026-01-08
+
+# SEC Form 4 Summary — Matador Resources (MTDR)
+
+**Filing Date:** January 8, 2026 | **Insider:** Robert T. Macalik, EVP & Chief Financial Officer
+
+## Key Transaction Details
+
+**This is an insider ownership filing (Form 4), not an earnings or operational report.** It discloses changes in CFO Macalik's beneficial ownership of MTDR common stock.
+
+- **Acquired 3,480 shares** on 01/06/2026 at $0 cost — settlement of performance stock units (PSUs) granted in February 2023. The PSUs settled at **58% of target**, based on MTDR's relative total shareholder return over the three-year period (Jan 2023–Dec 2025), suggesting **below-target TSR performance** versus peers.
+
+- **1,554 shares withheld** for tax obligations at **$41.41/share** (net share settlement; no open-market sale).
+
+- **Post-transaction direct holdings:** 111,119 shares, plus 35,039 shares in an IRA. Additionally holds **9,334 unvested restricted shares** (vesting through 2027).
+
+## Market-Moving Takeaways
+
+The 58% PSU payout signals MTDR **underperformed peers on total shareholder return** over 2023–2025. No production, guidance, or financial updates are included — this is strictly an insider compensation disclosure. The transaction is routine and non-discretionary.
+
+---
+## MTDR — 4 — 2026-01-08
+
+# SEC Form 4 Summary — Matador Resources (MTDR)
+
+**Filing Date:** January 8, 2026 | **Insider:** Bryan A. Erman, Co-President, CLO & Head of M&A
+
+## Key Details
+
+This is an **insider ownership filing** (Form 4), not an earnings or operational report. It discloses changes in beneficial ownership by a senior executive.
+
+**Transactions on 01/06/2026:**
+- **Acquired 3,480 shares** of common stock at $0 cost via settlement of performance stock units (PSUs) originally granted on February 16, 2023. The PSUs settled at **58% of target**, reflecting Matador's relative total shareholder return over the 3-year performance period (Jan 2023–Dec 2025).
+- **1,554 shares withheld** for tax obligations at **$41.41/share** (net share settlement — no open-market sale).
+
+**Post-Transaction Holdings:** ~86,266 total shares (79,616 direct + 2,400 in IRA + 4,250 in 401(k)), plus 2,667 restricted shares vesting around February 2026.
+
+## Market Implications
+
+The **58% PSU payout** signals underperformance versus peers on total shareholder return over 2023–2025. No voluntary selling occurred, which is neutral-to-positive for sentiment. This filing contains **no production updates, guidance changes, or financial results** — it is purely an insider compensation/ownership disclosure.
+
+---
+## DVN — 425 — 2026-02-02
+
+# DVN–CTRA Merger Summary (Filed 2026-02-02)
+
+## Key Transaction Details
+Devon Energy (DVN) announced an all-stock merger with Coterra Energy (CTRA) on February 1, 2026. Under the agreement, each Coterra share converts to **0.70 shares of Devon stock**. Post-close, Devon shareholders will own ~**54%** and Coterra shareholders ~**46%** of the combined company. The deal is structured as a tax-free reorganization under Section 368(a).
+
+## Governance & Leadership
+Devon's CEO becomes CEO of the combined entity; Coterra's CEO (Thomas Jorden) becomes Board Chair. The board will comprise 11 members (6 Devon, 5 Coterra). Headquarters will be in **Houston, TX**, with a continued presence in **Oklahoma City**.
+
+## Conditions & Timeline
+Closing requires shareholder approval from both companies, HSR antitrust clearance, and S-4 registration effectiveness. **Outside date: August 1, 2026**, extendable to February 2027 for antitrust issues. A **$865 million termination fee** applies to either party under specified circumstances.
+
+## Risks & Market-Moving Items
+- **Regulatory/antitrust risk** — extended timeline provisions signal potential scrutiny
+- **No ability to terminate for a superior proposal** — limits competitive bids
+- Amended severance agreements for key Coterra executives suggest retention/change-of-control provisions
+- Integration execution risk across Delaware Basin (Devon) and Marcellus/Permian (Coterra) portfolios
+
+This creates a **major diversified E&P**, combining Devon's oil-weighted assets with Coterra's natural gas exposure.
