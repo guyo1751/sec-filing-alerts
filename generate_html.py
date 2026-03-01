@@ -1,39 +1,38 @@
 import os
+import re
+
 
 def generate_html():
     summaries_file = "summaries.md"
     output_file = "docs/index.html"
-    
+
     os.makedirs("docs", exist_ok=True)
-    
+
     if not os.path.exists(summaries_file):
-        summaries = "No summaries yet."
+        summaries = ""
     else:
         with open(summaries_file) as f:
             summaries = f.read()
 
-    # Convert markdown to basic HTML
     html_entries = []
     entries = summaries.strip().split("\n---\n")
-for entry in entries:
+    for entry in entries:
         if not entry.strip():
             continue
         lines = entry.strip().split("\n")
         title = lines[0].replace("## ", "").strip()
         body = "\n".join(lines[2:]).strip()
 
-        # Convert **Section** headers to styled HTML
-        import re
-        body = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', body)
-
-        # Convert each section into its own block
-        sections = re.split(r'(<strong>.+?</strong>)', body)
+        sections = re.split(r'\*\*(.+?)\*\*', body)
         formatted = ""
-        for i, section in enumerate(sections):
-            if section.startswith("<strong>"):
-                formatted += f'<h3>{section.replace("<strong>", "").replace("</strong>", "")}</h3>'
-            elif section.strip():
-                formatted += f'<p>{section.strip()}</p>'
+        i = 0
+        while i < len(sections):
+            chunk = sections[i].strip()
+            if i % 2 == 1:
+                formatted += f'<h3>{chunk}</h3>'
+            elif chunk:
+                formatted += f'<p>{chunk}</p>'
+            i += 1
 
         html_entries.append(f"""
         <div class="card">
@@ -41,6 +40,8 @@ for entry in entries:
             {formatted}
         </div>
         """)
+
+    cards = "".join(reversed(html_entries))
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -74,11 +75,20 @@ for entry in entries:
             color: #222;
             font-size: 1.1em;
         }}
+        h3 {{
+            margin-top: 16px;
+            margin-bottom: 4px;
+            font-size: 0.95em;
+            color: #0066cc;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }}
         p {{
             line-height: 1.7;
             color: #444;
+            margin-top: 4px;
         }}
-        .updated {{
+        .subtitle {{
             font-size: 0.85em;
             color: #888;
             margin-bottom: 20px;
@@ -87,14 +97,15 @@ for entry in entries:
 </head>
 <body>
     <h1>SEC Filing Summaries</h1>
-    <p class="updated">Peer companies: PR | FANG | MTDR | CTRA | DVN | SM</p>
-    {"".join(reversed(html_entries))}
+    <p class="subtitle">Peer companies: PR | FANG | MTDR | CTRA | DVN | SM</p>
+    {cards}
 </body>
 </html>"""
 
     with open(output_file, "w") as f:
         f.write(html)
     print("HTML generated at docs/index.html")
+
 
 if __name__ == "__main__":
     generate_html()
