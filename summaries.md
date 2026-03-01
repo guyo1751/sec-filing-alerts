@@ -1304,3 +1304,145 @@ The filing responds to **multiple stockholder demand letters** alleging disclosu
 
 ## Market-Moving Takeaways
 The merger timeline remains intact with no guidance changes. The significant combined debt load (~$7.5B) and
+
+---
+## FANG — 10-Q — 2025-11-05
+
+# Diamondback Energy (FANG) — Q3 2025 10-Q Summary
+
+**Note:** The filing text provided contains only XBRL metadata/tags without the actual financial statements, narrative disclosures, or numerical data. However, key events can be inferred from the tagged transactions:
+
+## Key Transactions & Operational Updates
+
+- **Double Eagle Acquisition (April 1, 2025):** FANG closed an acquisition of Midland Basin assets, funded partly with common stock, adding horizontal drilling locations in primary development targets.
+
+- **Viper Energy / Sitio Acquisition (August 19, 2025):** Viper (FANG's mineral rights subsidiary) closed an acquisition of Sitio assets spanning the Permian Basin, DJ Basin, Eagle Ford, and Williston Basin — significantly expanding its mineral/royalty footprint.
+
+- **Endeavor Subsidiary Divestiture (May 1, 2025):** FANG sold certain Endeavor subsidiaries, receiving Viper LLC units and Viper Class B shares as consideration.
+
+- **TRP Energy Acquisition (Dec 2024):** Added Delaware and Midland Basin acreage; integration impact reflected in Q3 results.
+
+- **WTG Midstream Sale to Energy Transfer:** Completed mid-2024; continued earnout/transition activity through Q3 2025.
+
+## Risks
+Commodity price volatility, integration execution across multiple acquisitions, and Viper's growing noncontrolling interest complexity remain key concerns.
+
+*Full financial metrics unavailable from provided XBRL tags alone.*
+
+---
+## CTRA — 425 — 2026-02-03
+
+# Summary of CTRA SEC 425 Filing (February 3, 2026)
+
+## Devon Energy–Coterra Energy Merger Announcement
+
+**Deal Overview:** Devon Energy (DVN) and Coterra Energy (CTRA) announced an all-stock merger to create what they describe as the "premier shale operator." The combined entity will operate under the Devon Energy name, headquartered in Houston. Expected close: Q2 2026, subject to shareholder and regulatory approvals.
+
+**Key Financials:** The companies target **$1 billion in merger synergies** from capital optimization, operating margin improvements, and corporate cost reductions — notably **in addition to** Devon's existing $1 billion "Project Edge" cost-reduction target by end of 2026. A portion of synergies will come from workforce reductions across both companies.
+
+**Leadership:** Clay Gaspar (Devon) will serve as President & CEO; Tom Jorden (Coterra) becomes Non-Executive Board Chairman. Several Devon executives will depart post-close.
+
+**Risks:** Regulatory/shareholder approval uncertainty, integration execution risk, potential employee disruption, and commodity cycle exposure. No change-of-control provisions triggered, which may concern employees holding equity awards.
+
+**Market-Moving Takeaways:** The $2 billion combined synergy/cost target (Edge + merger) is aggressive. Scale consolidation in the Permian, Anadarko, Marcellus, and Eagle Ford strengthens the combined portfolio, but workforce cuts and Houston HQ relocation signal significant restructuring ahead.
+
+---
+## DVN — 8-K — 2025-11-05
+
+# Devon Energy (DVN) — 8-K Filing Summary (November 5, 2025)
+
+**Filing Type:** Item 2.02 — Results of Operations and Financial Condition
+
+**Key Details:**
+Devon Energy filed an 8-K on November 5, 2025, announcing its **Q3 2025 financial and operational results** (quarter ended September 30, 2025). The filing references an earnings release (Exhibit 99.1) and supplemental financial information including updated guidance and hedging data (Exhibit 99.2); however, the actual content of these exhibits is not included in the filing text provided.
+
+**What We Know:**
+- The filing is a standard quarterly earnings announcement wrapper.
+- Supplemental materials include **forward guidance and hedging positions**, which are typically market-moving for E&P companies.
+- Signed by CFO Jeffrey L. Ritenour.
+- Documents are furnished (not filed), meaning they are not subject to Section 18 liability — a standard treatment for earnings releases.
+
+**Limitations:**
+Without the actual earnings release and supplemental data (Exhibits 99.1 and 99.2), specific financials, production volumes, capital expenditure details, guidance changes, and risk disclosures **cannot be assessed**. Investors should review the full exhibits on Devon's website or SEC EDGAR for production figures, per-share earnings, cash flow, and any guidance revisions.
+
+---
+## DVN — 8-K — 2025-10-02
+
+## Devon Energy (DVN) 8-K Summary — Filed October 2, 2025
+
+**Filing Type:** Corporate governance update (Item 5.02) — No financial, operational, or guidance changes.
+
+**Key Event:** Devon's Board of Directors elected **Brent J. Smolik** as a new director, effective October 1, 2025. He will serve on the **Audit** and **Safety, Operations, and Resource Committees**.
+
+**Compensation Details:** Smolik will receive standard non-management director compensation and a restricted stock grant valued at **$154,384** (based on the October 9, 2025 closing price), vesting 100% the day after grant. He also entered the company's standard director indemnity agreement.
+
+**Related-Party Transactions:** None disclosed. No arrangements or understandings with any other person regarding the appointment.
+
+**Market Impact Assessment:** **Minimal.** This is a routine board appointment with no changes to financials, production guidance, capital allocation, or operational strategy. The restricted stock grant is immaterial relative to Devon's market capitalization.
+
+**Risks/Notable Items:** None flagged in this filing. Investors should look to upcoming quarterly earnings for production updates and guidance revisions. No indication this board change signals strategic shifts.
+
+---
+## SM — S-4/A — 2025-12-17
+
+# SM Energy (SM) – S-4/A Filing Summary (Dec. 17, 2025)
+
+## Transaction Overview
+SM Energy is acquiring **Civitas Resources (CIVI)** in an all-stock merger announced November 2, 2025. Each Civitas share converts into **1.45 shares of SM Energy common stock** (fixed exchange ratio). Post-merger, former Civitas stockholders will own ~**52%** and SM Energy stockholders ~**48%** of the combined company. SM Energy is also seeking to double authorized shares from 200M to 400M.
+
+## Key Details
+- **Special meetings** scheduled for **January 27, 2026**; both boards unanimously recommend approval.
+- **Kimmeridge Chelsea, LLC**, a significant Civitas shareholder, has committed to vote in favor via a voting agreement.
+- The merger involves a two-step structure: Civitas first survives as an SM Energy subsidiary, then merges into SM Energy directly.
+
+## Risks & Market-Moving Items
+- This is an **Amendment No. 1** (preliminary — not yet effective), suggesting ongoing SEC review.
+- Fixed exchange ratio means **no price protection** for either side against stock price fluctuations.
+- Significant **dilution** for existing SM Energy shareholders (~52% ownership shifting to Civitas holders).
+- Integration risks typical of large E&P combinations apply.
+
+**No updated financials, production data, or guidance changes** were included in the excerpted filing text; substantive financial details likely reside in the full proxy/prospectus sections.
+
+---
+## SM — S-4 — 2025-12-05
+
+# SM Energy (SM) S-4 Filing Summary — December 5, 2025
+
+## Key Transaction: SM Energy Acquiring Civitas Resources (CIVI)
+
+**Deal Structure:** SM Energy will acquire Civitas Resources through a two-step merger. Civitas shareholders receive a fixed exchange ratio of **1.45 SM Energy shares per Civitas share**. Post-closing, former Civitas stockholders will own ~**52%** and SM Energy stockholders ~**48%** of the combined company, making this a transformative, near-merger-of-equals transaction.
+
+**Key Details:**
+- Merger agreement signed **November 2, 2025**; SM Energy is seeking to double authorized shares from 200M to 400M to facilitate issuance.
+- Both boards **unanimously recommend** approval. Kimmeridge Chelsea, LLC (significant Civitas shareholder) signed a voting agreement supporting the deal.
+- Both special meetings will be virtual, with dates TBD (expected early 2026).
+
+**Risks:** Fixed exchange ratio exposes both shareholder bases to market price fluctuations; regulatory approvals, integration risk, and commodity price volatility are standard concerns. The filing references a detailed risk factors section.
+
+**Market-Moving Takeaway:** This is a major consolidation play in the DJ Basin/Permian, significantly scaling SM Energy's operations. The majority ownership by Civitas shareholders signals substantial dilution for existing SM holders.
+
+---
+## SM — 425 — 2025-11-21
+
+# SM Energy (SM) – Stephens Investment Conference Summary (Nov 20, 2025)
+
+## Key Takeaway: Civitas Resources Merger
+
+SM Energy is in the process of merging with **Civitas Resources (CIVI)**, a transaction management describes as "transformational" — more than doubling the company's size in production.
+
+## Key Financials & Synergies
+- **$200–$300M annual synergy target**, translating to **$1.0–$1.5B in NPV** (~30% of SM's current market cap)
+- **Pro forma 2025 free cash flow: ~$1.5B** (combined consensus)
+- Balance sheet starts strong at **mid-1x leverage**, with a well-staggered maturity profile and significant deleveraging runway via divestitures and FCF
+
+## Divestitures
+- SM disclosed a divestiture target from the combined portfolio, prioritizing assets with limited competitive inventory, favorable market valuations, and arbitrage opportunities. The **DJ Basin** (Colorado) is an obvious candidate given SM's lack of operational presence there, though no explicit confirmation was given.
+
+## Operational Highlights
+- Strong Q3 results (overshadowed by merger announcement)
+- XCL (Uinta) integration cited as a successful blueprint — operational innovations (remote frac, owned sand mines) transferred to Texas operations, driving cost improvements
+- Wolfcamp D and Woodford-Barnett testing expected to unlock incremental inventory across the combined Permian footprint
+
+## Risks
+- **Stock underperformance** post-announcement; management argues 120%+ upside to Enverus NAV vs. 3% for peers
+- **Colorado regulatory environment** acknowledged but deemed manageable — permitting
