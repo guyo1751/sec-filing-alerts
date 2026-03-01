@@ -51,7 +51,8 @@ def get_filing_text(cik, accession_number, primary_doc):
         return text[:15000]  # Limit to first 15k chars to control cost
     return None
 
-prompt = f"""You are a senior oil & gas equity analyst. Analyze this SEC {form_type} filing from {ticker} (filed {filing_date}) and provide a structured summary using the following format:
+def summarize_filing(ticker, form_type, filing_date, text):
+    prompt = f"""You are a senior oil & gas equity analyst. Analyze this SEC {form_type} filing from {ticker} (filed {filing_date}) and provide a structured summary using the following format:
 
 **Overview**
 One sentence on what this filing is and the reporting period.
@@ -80,7 +81,7 @@ Filing text:
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text
-
+    
 def send_ntfy_alert(ticker, form_type, filing_date, summary, accession_number):
     url = f"https://ntfy.sh/{NTFY_TOPIC}"
     title = f"{ticker} filed {form_type} on {filing_date}"
