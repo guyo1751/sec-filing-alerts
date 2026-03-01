@@ -76,7 +76,7 @@ Filing text:
 
     message = client.messages.create(
         model="claude-opus-4-6",
-        max_tokens=400,
+        max_tokens=1024,
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text
