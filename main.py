@@ -13,7 +13,7 @@ client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
 def get_cik_from_ticker(ticker):
     url = "https://www.sec.gov/files/company_tickers.json"
-    headers = {"User-Agent": "SECAlerts yourname@email.com"}
+    headers = {"User-Agent": "SECAlerts guy.oliphint@permianres.com"}
     resp = requests.get(url, headers=headers)
     data = resp.json()
     for entry in data.values():
