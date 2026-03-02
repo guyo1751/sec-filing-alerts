@@ -51,33 +51,97 @@ def get_filing_text(cik, accession_number, primary_doc):
         return text[:15000]  # Limit to first 15k chars to control cost
     return None
 
-def summarize_filing(ticker, form_type, filing_date, text):
-    prompt = f"""You are a senior oil & gas equity analyst. Analyze this SEC {form_type} filing from {ticker} (filed {filing_date}) and provide a structured summary using the following format:
+INSIDER_FORMS = {"3", "4", "5", "144", "SC 13D", "SC 13D/A", "SC 13G", "SC 13G/A"}
+EARNINGS_FORMS = {"10-K", "10-K/A", "10-Q", "10-Q/A"}
+EVENT_FORMS = {"8-K", "8-K/A"}
+
+
+def _build_prompt(ticker, form_type, filing_date, text):
+    base = f"SEC {form_type} filing from {ticker} (filed {filing_date}).\n\nFiling text:\n{text}"
+    no_title = "Do NOT start your response with a title or heading. Begin directly with the first section bold header."
+
+    if form_type in INSIDER_FORMS:
+        return f"""You are a senior equity analyst specializing in insider transaction analysis.
+Analyze this {base}
+
+{no_title} Provide a concise summary using exactly this structure:
+
+**Transaction Summary**
+Who filed, what form, and the nature of the transaction(s) in one to two sentences.
+
+**Transaction Details**
+List each transaction: date, shares/units, price, transaction code (buy/sell/gift/award/tax-withhold), and total dollar value where calculable.
+
+**Post-Transaction Holdings**
+Insider's remaining ownership after the transaction(s).
+
+**Market Signal**
+Is this discretionary or non-discretionary (10b5-1 plan, tax withholding, estate planning)? What, if anything, does this signal about insider sentiment? Keep to 2-3 sentences."""
+
+    if form_type in EARNINGS_FORMS:
+        return f"""You are a senior oil & gas equity analyst.
+Analyze this {base}
+
+{no_title} Provide a detailed summary using exactly this structure:
 
 **Overview**
-One sentence on what this filing is and the reporting period.
+One sentence: filing type, reporting period, and company.
 
 **Key Financials**
-Revenue, net income, EPS, EBITDA, free cash flow — actuals vs prior period where available.
+Revenue, net income, EPS, EBITDA, and free cash flow — actuals vs prior period. Note any beats or misses vs expectations if mentioned.
 
 **Production & Operations**
-Production volumes, any operational updates, capital expenditure.
+Total production volumes (BOE/d), oil/gas/NGL breakdown, capital expenditure, and any notable operational updates or asset changes.
 
 **Guidance & Outlook**
-Any forward guidance, updated forecasts, or management commentary on outlook.
+Full-year or next-quarter guidance figures, any changes from prior guidance, and management's commentary on macro outlook.
 
 **Risks & Concerns**
-Key risks, litigation, regulatory issues, or anything that could negatively impact the business.
+Key risk factors, debt levels, hedging exposure, or anything that could negatively impact the business.
 
 **Market Moving Items**
-Anything surprising, beats/misses vs expectations, or notable strategic announcements.
+Anything surprising — beats/misses, strategic announcements, one-time items, or guidance changes likely to move the stock."""
 
-Filing text:
-{text}"""
+    if form_type in EVENT_FORMS:
+        return f"""You are a senior oil & gas equity analyst.
+Analyze this {base}
+
+{no_title} Provide a focused summary using exactly this structure:
+
+**Event Summary**
+What happened? One to two sentences describing the specific event this 8-K reports.
+
+**Key Details**
+The most important facts, figures, or terms (e.g., deal size, production impact, pricing, parties involved).
+
+**Financial Impact**
+Quantified financial impact if disclosed — revenue, costs, charges, proceeds, etc.
+
+**Market Moving Assessment**
+Is this material? Bullish, bearish, or neutral signal? Why? Keep to 3-4 sentences."""
+
+    return f"""You are a senior equity analyst.
+Analyze this {base}
+
+{no_title} Provide a brief summary using exactly this structure:
+
+**Filing Purpose**
+One sentence explaining what this filing is and why it was submitted.
+
+**Key Content**
+The most important information disclosed — 3 to 5 bullet points.
+
+**Investor Relevance**
+Is this filing material to investors? Any action required or notable disclosures? 2-3 sentences."""
+
+
+def summarize_filing(ticker, form_type, filing_date, text):
+    prompt = _build_prompt(ticker, form_type, filing_date, text)
+    max_tokens = 1800 if form_type in EARNINGS_FORMS else 800
 
     message = client.messages.create(
         model="claude-opus-4-6",
-        max_tokens=1024,
+        max_tokens=max_tokens,
         messages=[{"role": "user", "content": prompt}]
     )
     return message.content[0].text
