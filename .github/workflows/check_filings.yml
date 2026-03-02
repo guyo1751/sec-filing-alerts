@@ -35,6 +35,7 @@ jobs:
           git config user.email "actions@github.com"
           git add tracker.json summaries.md docs/
           git diff --staged --quiet || git commit -m "Update filings and HTML"
+          git pull --rebase origin main
           git push
 
   deploy:
@@ -48,6 +49,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
